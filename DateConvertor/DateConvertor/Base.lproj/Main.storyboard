@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DateConvertor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9S6-zp-xcK">
+                                <date key="date" timeIntervalSinceReferenceDate="496232079.14002901">
+                                    <!--2016-09-22 10:14:39 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerValueChangedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="L5X-Xp-mmL"/>
+                                </connections>
+                            </datePicker>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zaa-lS-Usl">
+                                <segments>
+                                    <segment title="לועזי לעברי"/>
+                                    <segment title="עברי ללועזי"/>
+                                </segments>
+                                <connections>
+                                    <action selector="modeSegmentedControlValueChangedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Iez-iz-LIt"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2U-z0-nSC">
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9S6-zp-xcK" secondAttribute="trailing" id="417-Lv-ZnM"/>
+                            <constraint firstItem="Zaa-lS-Usl" firstAttribute="centerX" secondItem="9S6-zp-xcK" secondAttribute="centerX" id="ATg-ji-dbv"/>
+                            <constraint firstItem="u2U-z0-nSC" firstAttribute="centerX" secondItem="Zaa-lS-Usl" secondAttribute="centerX" id="HNS-OV-Sk9"/>
+                            <constraint firstItem="u2U-z0-nSC" firstAttribute="top" secondItem="Zaa-lS-Usl" secondAttribute="bottom" constant="16" id="KgM-pp-FdY"/>
+                            <constraint firstItem="Zaa-lS-Usl" firstAttribute="top" secondItem="9S6-zp-xcK" secondAttribute="bottom" constant="16" id="Ue0-jO-XLR"/>
+                            <constraint firstItem="9S6-zp-xcK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="YfP-Yf-erh"/>
+                            <constraint firstItem="Zaa-lS-Usl" firstAttribute="width" secondItem="9S6-zp-xcK" secondAttribute="width" multiplier="0.75" id="gF0-OC-byC"/>
+                            <constraint firstItem="9S6-zp-xcK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rJj-kM-ODJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="9S6-zp-xcK" id="YHb-fa-rYf"/>
+                        <outlet property="label" destination="u2U-z0-nSC" id="YNx-am-PeR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="170.40000000000001" y="-168.6656671664168"/>
+        </scene>
+    </scenes>
+</document>
