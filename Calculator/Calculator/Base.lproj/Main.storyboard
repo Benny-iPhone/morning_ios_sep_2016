@@ -29,8 +29,8 @@
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0d-u6-ODo">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="9jj-rj-LIl"/>
-                                                    <constraint firstAttribute="width" constant="50" id="DXz-zP-eKk"/>
+                                                    <constraint firstAttribute="height" constant="60" id="9jj-rj-LIl"/>
+                                                    <constraint firstAttribute="width" constant="60" id="DXz-zP-eKk"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="1" backgroundImage="full_moon">
@@ -58,8 +58,14 @@
                                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kET-8y-OIu"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGn-Wg-wNs">
-                                                <state key="normal" title="+" backgroundImage="full_moon"/>
+                                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGn-Wg-wNs">
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="+" backgroundImage="full_moon">
+                                                    <color key="titleColor" red="0.92549019610000005" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s6m-mp-Bec"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -74,10 +80,6 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wsz-K6-HaD">
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqN-Kp-O6D">
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="9Iv-83-M7i"/>
-                                                    <constraint firstAttribute="height" constant="50" id="JwY-ee-jdE"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="4" backgroundImage="full_moon">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -104,8 +106,14 @@
                                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nq9-vm-ydH"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyH-Re-WIE">
-                                                <state key="normal" title="+" backgroundImage="full_moon"/>
+                                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyH-Re-WIE">
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="-" backgroundImage="full_moon">
+                                                    <color key="titleColor" red="0.92549019610000005" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bBh-R5-qCm"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -120,10 +128,6 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TwT-LV-1to">
                                         <subviews>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge8-zm-oPc">
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="47j-Xc-E2U"/>
-                                                    <constraint firstAttribute="height" constant="50" id="Q3x-EU-6LE"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="7" backgroundImage="full_moon">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -150,8 +154,14 @@
                                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QKT-sp-phe"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aV8-mI-LMu">
-                                                <state key="normal" title="+" backgroundImage="full_moon"/>
+                                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aV8-mI-LMu">
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="×" backgroundImage="full_moon">
+                                                    <color key="titleColor" red="0.92549019610000005" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8dj-kF-T8Z"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -166,11 +176,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hTN-k1-8Jl">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CI-pj-KVn">
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="3kF-0G-his"/>
-                                                    <constraint firstAttribute="height" constant="50" id="8dg-aL-KjV"/>
-                                                </constraints>
-                                                <state key="normal" title="1" backgroundImage="full_moon"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="c" backgroundImage="full_moon">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HRc-cu-V1l"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vv9-ge-enJ">
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -181,11 +193,23 @@
                                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gEJ-kc-Oo5"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKg-k4-t6J">
-                                                <state key="normal" title="3" backgroundImage="full_moon"/>
+                                            <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKg-k4-t6J">
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="=" backgroundImage="full_moon">
+                                                    <color key="titleColor" red="0.92549019610000005" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uyq-Ng-8F7"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7y-wX-M59">
-                                                <state key="normal" title="+" backgroundImage="full_moon"/>
+                                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7y-wX-M59">
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="÷" backgroundImage="full_moon">
+                                                    <color key="titleColor" red="0.92549019610000005" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4td-SQ-DL5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -199,21 +223,41 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ESQ-W9-0uq">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQZ-zf-ucF">
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="SRP-Hs-gjc"/>
-                                                    <constraint firstAttribute="height" constant="50" id="ejg-1j-Qe7"/>
-                                                </constraints>
-                                                <state key="normal" title="1" backgroundImage="full_moon"/>
+                                            <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQZ-zf-ucF">
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="√" backgroundImage="full_moon">
+                                                    <color key="titleColor" red="0.92549019610000005" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AUV-eU-72C"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zan-ti-8Wz">
-                                                <state key="normal" title="2" backgroundImage="full_moon"/>
+                                            <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zan-ti-8Wz">
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="^2" backgroundImage="full_moon">
+                                                    <color key="titleColor" red="0.92549019610000005" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pCa-U7-f5g"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDr-0n-Ve5">
-                                                <state key="normal" title="3" backgroundImage="full_moon"/>
+                                            <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDr-0n-Ve5">
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="sin" backgroundImage="full_moon">
+                                                    <color key="titleColor" red="0.92549019610000005" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PeW-24-Z8d"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZj-Zw-hJD">
-                                                <state key="normal" title="+" backgroundImage="full_moon"/>
+                                            <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZj-Zw-hJD">
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="cos" backgroundImage="full_moon">
+                                                    <color key="titleColor" red="0.92549019610000005" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qvm-BC-UQg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -226,6 +270,16 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="ge8-zm-oPc" firstAttribute="height" secondItem="B0d-u6-ODo" secondAttribute="height" id="3CA-R3-oTe"/>
+                                    <constraint firstItem="0CI-pj-KVn" firstAttribute="width" secondItem="B0d-u6-ODo" secondAttribute="width" id="5A6-cx-VdI"/>
+                                    <constraint firstItem="CQZ-zf-ucF" firstAttribute="height" secondItem="B0d-u6-ODo" secondAttribute="height" id="Vu3-FB-jed"/>
+                                    <constraint firstItem="CQZ-zf-ucF" firstAttribute="width" secondItem="B0d-u6-ODo" secondAttribute="width" id="W0b-8I-Ske"/>
+                                    <constraint firstItem="ge8-zm-oPc" firstAttribute="width" secondItem="B0d-u6-ODo" secondAttribute="width" id="YJB-Xz-jY9"/>
+                                    <constraint firstItem="kqN-Kp-O6D" firstAttribute="width" secondItem="B0d-u6-ODo" secondAttribute="width" id="jSF-LM-ItS"/>
+                                    <constraint firstItem="kqN-Kp-O6D" firstAttribute="height" secondItem="B0d-u6-ODo" secondAttribute="height" id="rCN-f5-6wa"/>
+                                    <constraint firstItem="0CI-pj-KVn" firstAttribute="height" secondItem="B0d-u6-ODo" secondAttribute="height" id="vlM-Y9-e3n"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -238,6 +292,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonHeightLayoutConstraint" destination="9jj-rj-LIl" id="vKq-U2-ZYv"/>
+                        <outlet property="buttonWidthLayoutConstraint" destination="DXz-zP-eKk" id="Zrl-wV-7Eo"/>
                         <outlet property="resultLabel" destination="s4l-4t-N4I" id="JlU-ka-VgI"/>
                     </connections>
                 </viewController>

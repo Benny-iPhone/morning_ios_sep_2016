@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SliderSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="180" minValue="0.0" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="IfW-4f-XGg">
+                                <connections>
+                                    <action selector="sliderValueChangedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Nw1-z8-GgQ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gl-Cj-Yce">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ri8-RS-bOM">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IfW-4f-XGg" secondAttribute="trailing" constant="16" id="463-aa-7ID"/>
+                            <constraint firstItem="ri8-RS-bOM" firstAttribute="leading" secondItem="IfW-4f-XGg" secondAttribute="centerX" multiplier="1.2" id="5Ue-4Z-YkK"/>
+                            <constraint firstItem="IfW-4f-XGg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="YKJ-T6-4aR"/>
+                            <constraint firstItem="3gl-Cj-Yce" firstAttribute="trailing" secondItem="IfW-4f-XGg" secondAttribute="centerX" multiplier="0.8" id="ZSW-Ju-MKa"/>
+                            <constraint firstItem="IfW-4f-XGg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="x0C-6Z-Sqn"/>
+                            <constraint firstItem="3gl-Cj-Yce" firstAttribute="top" secondItem="IfW-4f-XGg" secondAttribute="bottom" constant="8" id="xzQ-8H-9Rm"/>
+                            <constraint firstItem="ri8-RS-bOM" firstAttribute="centerY" secondItem="3gl-Cj-Yce" secondAttribute="centerY" id="y52-Vw-a3B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="degreesLabel" destination="3gl-Cj-Yce" id="SOu-VV-m6O"/>
+                        <outlet property="radiansLabel" destination="ri8-RS-bOM" id="XEW-Rw-e9X"/>
+                        <outlet property="slider" destination="IfW-4f-XGg" id="Kgu-zE-Bl7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
