@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawSomething" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRL-sZ-RLU" customClass="DrawView" customModule="DrawSomething" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hU4-M2-lUG">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dcS-uh-ZXK"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="trash" id="7KK-eN-RNo">
+                                        <connections>
+                                            <action selector="clearAction:" destination="BYZ-38-t0r" id="8nz-y9-sA8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="SfO-Kr-0kg"/>
+                                    <barButtonItem title="black" id="Ixp-wf-3Ss">
+                                        <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <connections>
+                                            <action selector="blackAction:" destination="BYZ-38-t0r" id="WNu-mG-ipu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="urX-og-NpE"/>
+                                    <barButtonItem title="red" id="Zhr-CO-3Mc">
+                                        <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="redAction:" destination="BYZ-38-t0r" id="a1S-Uq-Sso"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8mr-Kv-CxL"/>
+                                    <barButtonItem title="green" id="fRT-rt-uWs">
+                                        <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="greenAction:" destination="BYZ-38-t0r" id="Aby-TN-04E"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dEA-Kz-Fj9"/>
+                                    <barButtonItem systemItem="save" id="5Y7-cf-YnT">
+                                        <connections>
+                                            <action selector="saveAction:" destination="BYZ-38-t0r" id="05K-R0-Vfh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RCA-Xq-bd9"/>
+                                    <barButtonItem systemItem="action" id="T54-Kz-Y83">
+                                        <connections>
+                                            <action selector="shareAction:" destination="BYZ-38-t0r" id="bGw-CJ-Ns8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="ssB-h7-bFW">
+                                <color key="maximumTrackTintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="XDJ-1R-mfi"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hU4-M2-lUG" secondAttribute="trailing" id="4q9-Kg-bQY"/>
+                            <constraint firstItem="hU4-M2-lUG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IiL-v8-Poc"/>
+                            <constraint firstItem="WRL-sZ-RLU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="J9a-cV-Du3"/>
+                            <constraint firstItem="ssB-h7-bFW" firstAttribute="trailing" secondItem="WRL-sZ-RLU" secondAttribute="trailing" id="SyJ-B4-nAk"/>
+                            <constraint firstItem="ssB-h7-bFW" firstAttribute="top" secondItem="WRL-sZ-RLU" secondAttribute="bottom" constant="8" id="W8S-dh-Y0d"/>
+                            <constraint firstAttribute="trailing" secondItem="WRL-sZ-RLU" secondAttribute="trailing" constant="20" id="fFS-hp-Jfy"/>
+                            <constraint firstItem="WRL-sZ-RLU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="mQK-Hi-gNV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hU4-M2-lUG" secondAttribute="bottom" id="nnV-GR-YDw"/>
+                            <constraint firstItem="hU4-M2-lUG" firstAttribute="top" secondItem="ssB-h7-bFW" secondAttribute="bottom" constant="8" id="okM-wT-b4L"/>
+                            <constraint firstItem="ssB-h7-bFW" firstAttribute="leading" secondItem="WRL-sZ-RLU" secondAttribute="leading" id="rrS-aE-9ZJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawView" destination="WRL-sZ-RLU" id="r9g-l3-lfj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>

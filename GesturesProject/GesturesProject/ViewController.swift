@@ -24,10 +24,24 @@ class ViewController: UIViewController {
             self.imageView.center = point
         }*/
         //linear animation
+        /*
         let options : UIViewAnimationOptions = .curveLinear
         UIView.animate(withDuration: 1.0, delay: 0, options: options, animations: { 
             self.imageView.center = point
             }, completion: nil)
+ */
+        
+        //constant speed
+        let speed : Double = 250 //points per second
+        let dist = Double(imageView.center.distance(toPoint: point))
+        
+        let t : TimeInterval = dist/speed
+        
+        func animFunc(){
+            self.imageView.center = point
+        }
+        
+        UIView.animate(withDuration: t, delay: 0, options: .curveLinear, animations: animFunc, completion: nil)
     }
     
     
@@ -43,4 +57,13 @@ class ViewController: UIViewController {
 
 
 }
+
+
+
+
+
+
+
+
+
 
