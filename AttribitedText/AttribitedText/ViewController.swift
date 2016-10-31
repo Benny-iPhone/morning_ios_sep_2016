@@ -16,6 +16,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        arc4random_uniform(36)
+        
         /*
         labels.sort {return $0.tag < $1.tag}
  */
