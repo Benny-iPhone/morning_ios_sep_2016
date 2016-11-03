@@ -1,0 +1,11 @@
+/* 
+  Localize.strings
+  Localizations
+
+  Created by Benny Davidovitz on 31/10/2016.
+  Copyright © 2016 xcoder.solutions. All rights reserved.
+*/
+
+"key" = "מפתח";
+"VIEW_CONTORLLER_LABEL_1" = "שלום 1";
+"VIEW_CONTROLLER_LABEL_2" = "שלום 2";

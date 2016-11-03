@@ -20,10 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let families = UIFont.familyNames
         print(families)
         
-        let fontNames = UIFont.fontNames(forFamilyName: "Times New Roman")
+        let fontNames = UIFont.fontNames(forFamilyName: "Itim")
         print("\n")
         print(fontNames)
         print("\n")
+        print(UIFont.fontNames(forFamilyName: "Indie Flower"))
         
         
         return true

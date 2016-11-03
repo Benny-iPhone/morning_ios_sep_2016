@@ -15,7 +15,7 @@ class FontLabel: UILabel {
         shadowColor = .black
         shadowOffset = CGSize(width: 1, height: 1)
         
-        font = UIFont(name: "TimesNewRomanPSMT", size: 40)
+        font = UIFont(name: "IndieFlower", size: 40)
         //UIFont.italicSystemFont(ofSize: 60)
         //UIFont.boldSystemFont(ofSize: 24)
     }

@@ -13,6 +13,8 @@
 		B20962891DC74878008A4DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20962881DC74878008A4DAB /* Assets.xcassets */; };
 		B209628C1DC74878008A4DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B209628A1DC74878008A4DAB /* LaunchScreen.storyboard */; };
 		B20962951DC748E8008A4DAB /* FontLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20962941DC748E8008A4DAB /* FontLabel.swift */; };
+		B20962981DC75D47008A4DAB /* IndieFlower.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B20962971DC75D47008A4DAB /* IndieFlower.ttf */; };
+		B209629A1DC75D56008A4DAB /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B20962991DC75D52008A4DAB /* Itim-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B209628B1DC74878008A4DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B209628D1DC74878008A4DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B20962941DC748E8008A4DAB /* FontLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontLabel.swift; sourceTree = "<group>"; };
+		B20962971DC75D47008A4DAB /* IndieFlower.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IndieFlower.ttf; sourceTree = "<group>"; };
+		B20962991DC75D52008A4DAB /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 				B20962881DC74878008A4DAB /* Assets.xcassets */,
 				B209628A1DC74878008A4DAB /* LaunchScreen.storyboard */,
 				B209628D1DC74878008A4DAB /* Info.plist */,
+				B20962961DC75CCF008A4DAB /* fonts */,
 			);
 			path = CustomFont;
 			sourceTree = "<group>";
@@ -73,6 +78,15 @@
 				B20962941DC748E8008A4DAB /* FontLabel.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		B20962961DC75CCF008A4DAB /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B20962991DC75D52008A4DAB /* Itim-Regular.ttf */,
+				B20962971DC75D47008A4DAB /* IndieFlower.ttf */,
+			);
+			name = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +148,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B209629A1DC75D56008A4DAB /* Itim-Regular.ttf in Resources */,
 				B209628C1DC74878008A4DAB /* LaunchScreen.storyboard in Resources */,
 				B20962891DC74878008A4DAB /* Assets.xcassets in Resources */,
 				B20962871DC74878008A4DAB /* Main.storyboard in Resources */,
+				B20962981DC75D47008A4DAB /* IndieFlower.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
