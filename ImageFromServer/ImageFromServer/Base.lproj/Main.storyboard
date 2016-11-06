@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Avichai View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AvichaiViewController" customModule="ImageFromServer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dwq-rP-BV8">
+                                <rect key="frame" x="16" y="20" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="6wv-s4-KLk"/>
+                                    <constraint firstAttribute="width" constant="200" id="jjb-dQ-Fm7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1b0-QE-jCi">
+                                <rect key="frame" x="16" y="244" width="112" height="30"/>
+                                <state key="normal" title="download image"/>
+                                <connections>
+                                    <action selector="downloadAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C5n-l2-ldb"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ESI-9r-Zfa">
+                                <rect key="frame" x="98" y="102" width="37" height="37"/>
+                                <color key="color" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ESI-9r-Zfa" firstAttribute="centerX" secondItem="dwq-rP-BV8" secondAttribute="centerX" id="7dR-xP-cRg"/>
+                            <constraint firstItem="1b0-QE-jCi" firstAttribute="leading" secondItem="dwq-rP-BV8" secondAttribute="leading" id="Gbz-2b-OVr"/>
+                            <constraint firstItem="ESI-9r-Zfa" firstAttribute="centerY" secondItem="dwq-rP-BV8" secondAttribute="centerY" id="Zkk-ru-b0z"/>
+                            <constraint firstItem="dwq-rP-BV8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="ab3-h2-401"/>
+                            <constraint firstItem="dwq-rP-BV8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="oA2-kE-mAf"/>
+                            <constraint firstItem="1b0-QE-jCi" firstAttribute="top" secondItem="dwq-rP-BV8" secondAttribute="bottom" constant="24" id="xfS-8q-WNG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indicatorView" destination="ESI-9r-Zfa" id="0Hn-9L-204"/>
+                        <outlet property="urlImageView" destination="dwq-rP-BV8" id="iJK-W7-hYG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
