@@ -73,6 +73,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
                                         <connections>
+                                            <action selector="textFieldChangedAction:" destination="BYZ-38-t0r" eventType="editingChanged" id="mOF-nF-2NL"/>
                                             <action selector="textFieldDidEndOnExitAction:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="9Xw-gz-krN"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="Dwl-4v-GFG"/>
                                         </connections>
@@ -138,6 +139,8 @@
                         <outlet property="emailTextField" destination="rzc-zI-l9N" id="6cs-GB-VC3"/>
                         <outlet property="firstNameTextField" destination="Uf6-lH-3K6" id="ytg-Fi-QHD"/>
                         <outlet property="lastNameTextField" destination="NG5-uQ-hgi" id="4Zh-AX-bqW"/>
+                        <outlet property="passwordTextField" destination="vKk-Ad-CKZ" id="pHt-Os-Z8p"/>
+                        <outlet property="phoneTextField" destination="mNu-6r-elX" id="Mpo-1J-oHW"/>
                         <outlet property="stackViewTopLayout" destination="l61-at-Qgq" id="QfR-hU-385"/>
                     </connections>
                 </viewController>

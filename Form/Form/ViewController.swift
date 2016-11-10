@@ -14,8 +14,9 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var stackViewTopLayout: NSLayoutConstraint!
     @IBOutlet weak var lastNameTextField: AppTextField!
+    @IBOutlet weak var passwordTextField: AppTextField!
     @IBOutlet weak var firstNameTextField: AppTextField!
-    
+    @IBOutlet weak var phoneTextField: AppTextField!
     @IBOutlet weak var emailTextField: AppTextField!
     
     @IBAction func tapAction(_ sender: Any) {
@@ -37,7 +38,7 @@ class ViewController: UIViewController{
     }
     
     @IBAction func textFieldChangedAction(_ sender : AppTextField){
-        sender.showWarning = false
+        sender.rightViewState = .clearButton
     }
     
     @IBAction func doneAction(_ sender: Any) {
@@ -97,19 +98,40 @@ extension ViewController : UITextFieldDelegate{
         
         switch textField {
         case firstNameTextField:
-            textField.showWarning = text.isEmpty
+            textField.rightViewState = text.isEmpty ? .warning : .okay
         case emailTextField:
-            textField.showWarning = !text.isValidEmail()
+            textField.rightViewState = text.isValidEmail() ? .okay : .warning
+        case phoneTextField:
+            textField.rightViewState = text.isValidPhoneNumber() ? .okay : .warning
+ 
         default:
             break
         }
         
         
         
-        return !textField.showWarning
+        return textField.rightViewState != .warning
 
     }
     
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        guard let text = textField.text else {
+            return true
+        }
+        
+        switch textField {
+        case passwordTextField:
+            break
+        default:
+            return true
+        }
+        
+        let newLength = text.characters.count + string.characters.count - range.length
+        return newLength <= 10
+        
+    }
     
     
     /*

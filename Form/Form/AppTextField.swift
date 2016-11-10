@@ -9,15 +9,36 @@
 import UIKit
 
 class AppTextField: UITextField {
-    
-    var showWarning : Bool{
-        set /*(newValue)*/{
-            self.rightViewMode = newValue ? .always : .never
-        }
-        get{
-            return rightViewMode == .always
+    enum State{
+        case clearButton
+        case warning
+        case okay
+        
+        func image() -> UIImage?{
+            switch self {
+            case .clearButton: return nil
+            case .warning: return #imageLiteral(resourceName: "bug")
+            case .okay: return #imageLiteral(resourceName: "checked_2")
+            }
         }
     }
+    
+    var rightViewState : State = .clearButton{
+        didSet{
+            if let image = rightViewState.image(){
+                //not-none
+                rightView = UIImageView(image: image)
+                rightViewMode = .always
+                clearButtonMode = .never
+            } else {
+                //none
+                rightViewMode = .never
+                rightView = nil
+                clearButtonMode = .whileEditing
+            }
+        }
+    }
+    
     
 
     fileprivate func addToolBar(){
@@ -41,9 +62,7 @@ class AppTextField: UITextField {
     }
     
     fileprivate func initialize(){
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "bug"))
-        self.rightView = imageView
-        self.showWarning = false
+        self.rightViewState = .clearButton
 
         
         //font = UIFont(name: "Georgia", size: 16)

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import libPhoneNumber_iOS
 
 extension UIView{
     
@@ -40,7 +41,21 @@ extension String{
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: self)
     }
+    
+    func isValidPhoneNumber() -> Bool{
+        let phoneUtil = NBPhoneNumberUtil()
+        
+        guard let phoneNumber: NBPhoneNumber = try? phoneUtil.parse(self, defaultRegion: "IL") else{
+            return false
+        }
+        
+        return phoneUtil.isValidNumber(phoneNumber)
+    }
 }
+
+
+
+
 
 
 
