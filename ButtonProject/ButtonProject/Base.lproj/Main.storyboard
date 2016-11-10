@@ -35,7 +35,7 @@
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pvu-4D-UVI">
-                                <rect key="frame" x="58" y="134" width="22" height="22"/>
+                                <rect key="frame" x="269" y="66" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </button>
@@ -47,9 +47,42 @@
                                     <action selector="trumpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mjg-37-LH2"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPE-Dq-pAx" customClass="AppControl" customModule="ButtonProject" customModuleProvider="target">
+                                <rect key="frame" x="118" y="305.5" width="139" height="56"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Donald Trump-48" translatesAutoresizingMaskIntoConstraints="NO" id="EZg-XD-WV8">
+                                        <rect key="frame" x="4" y="4" width="48" height="48"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlA-8C-ket">
+                                        <rect key="frame" x="60" y="7.5" width="71" height="41"/>
+                                        <string key="text">Press Me
+123123</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="EZg-XD-WV8" firstAttribute="leading" secondItem="VPE-Dq-pAx" secondAttribute="leading" constant="4" id="3BH-v3-vqJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="EZg-XD-WV8" secondAttribute="bottom" constant="4" id="ARP-w8-5jR"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xlA-8C-ket" secondAttribute="bottom" constant="4" id="BYS-ng-njA"/>
+                                    <constraint firstItem="xlA-8C-ket" firstAttribute="centerY" secondItem="EZg-XD-WV8" secondAttribute="centerY" id="BiT-1B-2ka"/>
+                                    <constraint firstItem="xlA-8C-ket" firstAttribute="leading" secondItem="EZg-XD-WV8" secondAttribute="trailing" constant="8" id="Kdz-js-Bdj"/>
+                                    <constraint firstItem="xlA-8C-ket" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VPE-Dq-pAx" secondAttribute="top" constant="4" id="ZaA-WB-18B"/>
+                                    <constraint firstItem="EZg-XD-WV8" firstAttribute="top" secondItem="VPE-Dq-pAx" secondAttribute="top" constant="4" id="fcT-bP-dgC"/>
+                                    <constraint firstAttribute="trailing" secondItem="xlA-8C-ket" secondAttribute="trailing" constant="8" id="xZi-Yh-kc3"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="controlAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cvf-rY-SDt"/>
+                                    <outlet property="label" destination="xlA-8C-ket" id="ZOz-gl-GSV"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="VPE-Dq-pAx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2fG-VF-UQE"/>
+                            <constraint firstItem="VPE-Dq-pAx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XWi-5n-w2B"/>
                             <constraint firstItem="eiO-Q8-nTb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="fBB-tE-FMp"/>
                             <constraint firstItem="oL2-iD-3ZY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rDi-sf-S4P"/>
                             <constraint firstItem="yKK-ZP-KaZ" firstAttribute="top" secondItem="oL2-iD-3ZY" secondAttribute="bottom" constant="8" id="sdp-qe-KjL"/>
@@ -64,6 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>

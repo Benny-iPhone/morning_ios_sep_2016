@@ -26,6 +26,10 @@ class ViewController: UIViewController {
         sender.isSelected = !sender.isSelected
         
     }
+    
+    @IBAction func  controlAction(_ sender: AnyObject){
+        print(#function)
+    }
 
 
 }
