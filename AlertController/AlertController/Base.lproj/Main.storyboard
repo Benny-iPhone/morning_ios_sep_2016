@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4l1-ji-US2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlertController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iX1-HU-chu">
+                                <rect key="frame" x="118" y="52" width="138" height="30"/>
+                                <state key="normal" title="show annoying alert"/>
+                                <connections>
+                                    <action selector="showAnnoyingAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RSG-Ol-tHV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cW-bD-Vzl">
+                                <rect key="frame" x="117" y="90" width="141" height="30"/>
+                                <state key="normal" title="show 2 buttons alert"/>
+                                <connections>
+                                    <action selector="showTwoButtonsAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XlK-1F-hAZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkq-wk-CRN">
+                                <rect key="frame" x="133" y="128" width="109" height="30"/>
+                                <state key="normal" title="show login alert"/>
+                                <connections>
+                                    <action selector="showLoginAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aRZ-qj-v3k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tkq-wk-CRN" firstAttribute="centerX" secondItem="9cW-bD-Vzl" secondAttribute="centerX" id="124-Dx-fMo"/>
+                            <constraint firstItem="iX1-HU-chu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Nr-ux-4ie"/>
+                            <constraint firstItem="9cW-bD-Vzl" firstAttribute="centerX" secondItem="iX1-HU-chu" secondAttribute="centerX" id="F7g-9b-gao"/>
+                            <constraint firstItem="iX1-HU-chu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="FF2-1d-pwD"/>
+                            <constraint firstItem="9cW-bD-Vzl" firstAttribute="top" secondItem="iX1-HU-chu" secondAttribute="bottom" constant="8" id="Od9-Qz-kui"/>
+                            <constraint firstItem="tkq-wk-CRN" firstAttribute="top" secondItem="9cW-bD-Vzl" secondAttribute="bottom" constant="8" id="YW9-4g-kqE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="SKo-AT-0um"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="-471"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sw7-9c-0gd">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4l1-ji-US2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="44u-Um-y15">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="CKy-al-6Ze"/>
+                        <segue destination="pSE-iV-i9X" kind="relationship" relationship="viewControllers" id="ucO-FT-DpE"/>
+                        <segue destination="WfE-JY-hNX" kind="relationship" relationship="viewControllers" id="Zyo-Ru-KNz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A9W-Kk-o5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="YdU-GD-xsX">
+            <objects>
+                <viewController id="WfE-JY-hNX" customClass="VideoViewController" customModule="AlertController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nbz-18-Pqf"/>
+                        <viewControllerLayoutGuide type="bottom" id="fOB-PQ-eUM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T3d-74-4US">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHy-la-tFk">
+                                <rect key="frame" x="161" y="28" width="53" height="30"/>
+                                <state key="normal" title="capture"/>
+                                <connections>
+                                    <action selector="captureVideoAction:" destination="WfE-JY-hNX" eventType="touchUpInside" id="wmA-Ws-PzY"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dhk-7U-4QY">
+                                <rect key="frame" x="67" y="213.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="1IR-mn-AAf"/>
+                                    <constraint firstAttribute="width" constant="240" id="sUk-mw-24H"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-Z6-QVS">
+                                <rect key="frame" x="159.5" y="313" width="55" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title=" Play "/>
+                                <connections>
+                                    <action selector="playAction:" destination="WfE-JY-hNX" eventType="touchUpInside" id="0sj-b7-Qe1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pHy-la-tFk" firstAttribute="top" secondItem="Nbz-18-Pqf" secondAttribute="bottom" constant="8" id="e69-7I-Pr4"/>
+                            <constraint firstItem="Dhk-7U-4QY" firstAttribute="centerY" secondItem="T3d-74-4US" secondAttribute="centerY" id="hsz-zg-dR9"/>
+                            <constraint firstItem="gR3-Z6-QVS" firstAttribute="centerY" secondItem="Dhk-7U-4QY" secondAttribute="centerY" id="qfw-ZZ-U2s"/>
+                            <constraint firstItem="gR3-Z6-QVS" firstAttribute="centerX" secondItem="Dhk-7U-4QY" secondAttribute="centerX" id="qnJ-So-pRm"/>
+                            <constraint firstItem="pHy-la-tFk" firstAttribute="centerX" secondItem="T3d-74-4US" secondAttribute="centerX" id="yW7-4h-pqp"/>
+                            <constraint firstItem="Dhk-7U-4QY" firstAttribute="centerX" secondItem="T3d-74-4US" secondAttribute="centerX" id="yrr-ES-uLc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Qrk-HS-dXn"/>
+                    <connections>
+                        <outlet property="playButton" destination="gR3-Z6-QVS" id="kb2-Kn-Jks"/>
+                        <outlet property="thumbnailImageView" destination="Dhk-7U-4QY" id="vWi-Mt-YYY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRd-oi-Jql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905" y="375"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="37B-Wt-NVC">
+            <objects>
+                <viewController id="pSE-iV-i9X" customClass="ImageViewController" customModule="AlertController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H2P-B9-RFp"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Ps-TA-EZd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eiz-81-DNk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Ehf-rJ-pFl">
+                                <rect key="frame" x="67" y="213.5" width="240" height="240"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="50e-Rd-c5j"/>
+                                    <constraint firstAttribute="width" constant="240" id="REg-qU-fxe"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qam-f8-MbN" appends="YES" id="LQN-PL-LKE"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Ehf-rJ-pFl" firstAttribute="centerX" secondItem="eiz-81-DNk" secondAttribute="centerX" id="cjy-Ct-xHa"/>
+                            <constraint firstItem="Ehf-rJ-pFl" firstAttribute="centerY" secondItem="eiz-81-DNk" secondAttribute="centerY" id="piH-UO-w22"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="gfQ-Cj-5p2"/>
+                    <connections>
+                        <outlet property="imageView" destination="Ehf-rJ-pFl" id="wmR-7N-4pV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xO9-5y-gAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qam-f8-MbN">
+                    <connections>
+                        <action selector="tapAction:" destination="pSE-iV-i9X" id="WRX-EP-y9v"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1710" y="-89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avatar" width="256" height="256"/>
+    </resources>
+</document>

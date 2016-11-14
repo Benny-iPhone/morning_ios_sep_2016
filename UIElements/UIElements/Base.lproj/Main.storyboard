@@ -80,6 +80,10 @@
         <scene sceneID="fcN-ks-rr5">
             <objects>
                 <viewController storyboardIdentifier="FirstViewController" id="VVe-6n-Str" customClass="FirstViewController" customModule="UIElements" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uTp-sX-3Jn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rh4-68-Z3v"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7ik-Bi-kNY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,17 +146,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" value="10" minimumValue="8" maximumValue="12" stepValue="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="LIS-Rd-w49">
+                                <rect key="frame" x="16" y="93" width="94" height="29"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="stepperAction:" destination="rK4-Bz-9ze" eventType="valueChanged" id="GI6-wf-pgj"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKk-iO-VQK">
+                                <rect key="frame" x="42" y="141" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LIS-Rd-w49" firstAttribute="leading" secondItem="GPK-G0-194" secondAttribute="leading" id="Hjb-cE-FXd"/>
                             <constraint firstItem="GPK-G0-194" firstAttribute="top" secondItem="faq-ie-kBD" secondAttribute="bottom" constant="16" id="QSp-sD-vcV"/>
+                            <constraint firstItem="lKk-iO-VQK" firstAttribute="centerX" secondItem="LIS-Rd-w49" secondAttribute="centerX" id="S0m-nS-PPm"/>
+                            <constraint firstItem="lKk-iO-VQK" firstAttribute="top" secondItem="LIS-Rd-w49" secondAttribute="bottom" constant="19" id="YhG-5P-g5S"/>
                             <constraint firstItem="GPK-G0-194" firstAttribute="leading" secondItem="nAm-fI-gDR" secondAttribute="leading" constant="16" id="Yvs-f8-ChL"/>
                             <constraint firstItem="LcC-zT-zer" firstAttribute="centerY" secondItem="GPK-G0-194" secondAttribute="centerY" id="gl8-aJ-UY8"/>
                             <constraint firstItem="LcC-zT-zer" firstAttribute="leading" secondItem="GPK-G0-194" secondAttribute="trailing" constant="16" id="iSY-s9-TJo"/>
+                            <constraint firstItem="LIS-Rd-w49" firstAttribute="top" secondItem="GPK-G0-194" secondAttribute="bottom" constant="36" id="neZ-FB-6kq"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="connectionSwitch" destination="LcC-zT-zer" id="Frh-8T-Viq"/>
+                        <outlet property="stepper" destination="LIS-Rd-w49" id="mvg-5h-TNE"/>
+                        <outlet property="stepperLabel" destination="lKk-iO-VQK" id="4cY-k3-2il"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4x7-9I-rcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
