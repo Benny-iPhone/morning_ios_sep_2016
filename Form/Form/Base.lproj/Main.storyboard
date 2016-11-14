@@ -134,8 +134,15 @@
                             <outletCollection property="gestureRecognizers" destination="VXB-rz-Hyc" appends="YES" id="ElD-D6-IcI"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome" id="DTr-x3-9Si"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="DTr-x3-9Si">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="4SS-Zh-k2b">
+                            <connections>
+                                <segue destination="81j-YP-0L9" kind="show" id="SYO-E2-LjD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addressTextField" destination="3fT-Ir-kYS" id="cmW-zy-9lB"/>
                         <outlet property="emailTextField" destination="rzc-zI-l9N" id="6cs-GB-VC3"/>
                         <outlet property="firstNameTextField" destination="Uf6-lH-3K6" id="ytg-Fi-QHD"/>
                         <outlet property="lastNameTextField" destination="NG5-uQ-hgi" id="4Zh-AX-bqW"/>
@@ -153,12 +160,63 @@
             </objects>
             <point key="canvasLocation" x="967" y="793"/>
         </scene>
+        <!--Test View Controller-->
+        <scene sceneID="0yb-pq-yrb">
+            <objects>
+                <viewController id="81j-YP-0L9" customClass="TestViewController" customModule="Form" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JpO-W2-f3H"/>
+                        <viewControllerLayoutGuide type="bottom" id="8yY-BY-HWF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HZI-eL-467">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name LAbel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Un-1P-nNn">
+                                <rect key="frame" x="16" y="86" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RE0-3r-gjC">
+                                <rect key="frame" x="16" y="122" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbs-kK-KE6">
+                                <rect key="frame" x="16" y="170" width="30" height="30"/>
+                                <state key="normal" title="test"/>
+                                <connections>
+                                    <action selector="getCurrentPlace:" destination="81j-YP-0L9" eventType="touchUpInside" id="EAI-tC-MFS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hbs-kK-KE6" firstAttribute="leading" secondItem="RE0-3r-gjC" secondAttribute="leading" id="Qjl-Ay-jtL"/>
+                            <constraint firstItem="Hbs-kK-KE6" firstAttribute="top" secondItem="RE0-3r-gjC" secondAttribute="bottom" constant="27" id="U2w-K8-d8G"/>
+                            <constraint firstItem="RE0-3r-gjC" firstAttribute="top" secondItem="0Un-1P-nNn" secondAttribute="bottom" constant="15" id="W3B-PK-Dxg"/>
+                            <constraint firstItem="RE0-3r-gjC" firstAttribute="leading" secondItem="0Un-1P-nNn" secondAttribute="leading" id="bDm-51-X5A"/>
+                            <constraint firstItem="0Un-1P-nNn" firstAttribute="top" secondItem="JpO-W2-f3H" secondAttribute="bottom" constant="22" id="uYD-fl-FgR"/>
+                            <constraint firstItem="0Un-1P-nNn" firstAttribute="leading" secondItem="HZI-eL-467" secondAttribute="leading" constant="16" id="yIU-cQ-NWt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="RE0-3r-gjC" id="S9L-pb-pBF"/>
+                        <outlet property="nameLabel" destination="0Un-1P-nNn" id="aAl-Gg-FOS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LWO-qv-oRS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1730" y="796"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="fm8-NQ-rUg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lBb-0u-kwN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KTD-QY-iKv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KTD-QY-iKv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

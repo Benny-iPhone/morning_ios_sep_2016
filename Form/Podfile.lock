@@ -1,12 +1,28 @@
 PODS:
+  - GoogleMaps (2.0.1):
+    - GoogleMaps/Maps (= 2.0.1)
+  - GoogleMaps/Base (2.0.1)
+  - GoogleMaps/Maps (2.0.1):
+    - GoogleMaps/Base (= 2.0.1)
+  - GooglePlacePicker (2.0.1):
+    - GoogleMaps (= 2.0.1)
+    - GooglePlaces (= 2.0.1)
+  - GooglePlaces (2.0.1):
+    - GoogleMaps/Base (= 2.0.1)
   - libPhoneNumber-iOS (0.8.16)
 
 DEPENDENCIES:
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
   - libPhoneNumber-iOS (~> 0.8)
 
 SPEC CHECKSUMS:
+  GoogleMaps: f09da64fc987c1aa29394567c3cab5a3df83c402
+  GooglePlacePicker: e7b11b732e40dbe76e8ab4c5fc2f4a7c32b96578
+  GooglePlaces: 72fab1d1651c6df0322f2aad245ffb15b80d3c56
   libPhoneNumber-iOS: acb5805f67892db37adc3440290a367923672b51
 
-PODFILE CHECKSUM: e3c0d75431a20dd519f6e185728368e083561e24
+PODFILE CHECKSUM: 114fa78f4e4c213bac5854bf286908c69ad0241e
 
 COCOAPODS: 1.1.1

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GooglePlaces
 
 class ViewController: UIViewController{
 
@@ -18,6 +19,27 @@ class ViewController: UIViewController{
     @IBOutlet weak var firstNameTextField: AppTextField!
     @IBOutlet weak var phoneTextField: AppTextField!
     @IBOutlet weak var emailTextField: AppTextField!
+    @IBOutlet weak var addressTextField: AppTextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //read default value from storyboard
+        topLayoutInitiateY = stackViewTopLayout.constant
+        
+        firstNameTextField.becomeFirstResponder()
+        //lastNameTextField.delegate = self
+        
+    }
+    
+    //MARK: - Helpers
+    
+    func showAutocompleteController(){
+        let controller = GMSAutocompleteViewController()
+        controller.delegate = self
+        present(controller, animated: true, completion: nil)
+    }
+    
+    //MARK: - IBAction
     
     @IBAction func tapAction(_ sender: Any) {
         //firstNameTextField.resignFirstResponder()
@@ -48,15 +70,7 @@ class ViewController: UIViewController{
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //read default value from storyboard
-        topLayoutInitiateY = stackViewTopLayout.constant
-        
-        firstNameTextField.becomeFirstResponder()
-        //lastNameTextField.delegate = self
-        
-    }
+    
 
     
 }
@@ -86,6 +100,13 @@ extension ViewController : UITextFieldDelegate{
         let y = textField.frame.origin.y - firstNameTextField.frame.origin.y
 
         changeTopBy(y)
+        
+        switch textField {
+        case addressTextField:
+            showAutocompleteController()
+        default:
+            break
+        }
         
     }
     
@@ -145,7 +166,34 @@ extension ViewController : UITextFieldDelegate{
     }*/
 }
 
-
+extension ViewController : GMSAutocompleteViewControllerDelegate{
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        
+        addressTextField.text = place.formattedAddress
+        
+        viewController.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        print(error)
+//        viewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
+    
+    //Did Start Network access
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    //Did End Network access
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+}
 
 
 
