@@ -1,0 +1,8 @@
+
+target 'CollectionViewPhotos' do
+
+use_frameworks!
+
+pod 'DKImagePickerController', '> 0.1'
+
+end
