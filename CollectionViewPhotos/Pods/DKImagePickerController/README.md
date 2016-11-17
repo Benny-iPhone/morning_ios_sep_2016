@@ -26,6 +26,7 @@ It's a Facebook style Image Picker Controller by Swift. It uses [DKCamera][DKCam
 ## Requirements
 * iOS 8.0+
 * ARC
+* Swift 3 and Xcode 8
 
 ## Installation
 #### iOS 8 and newer
@@ -34,6 +35,8 @@ DKImagePickerController is available on CocoaPods. Simply add the following line
 ```ruby
 # For latest release in cocoapods
 pod 'DKImagePickerController'
+
+
 ```
 
 #### iOS 7.x
@@ -42,6 +45,12 @@ pod 'DKImagePickerController'
 
 > To use Swift libraries on apps that support iOS 7, you must manually copy the files into your application project.
 [CocoaPods only supports Swift on OS X 10.9 and newer, and iOS 8 and newer.](https://github.com/CocoaPods/blog.cocoapods.org/commit/6933ae5ccfc1e0b39dd23f4ec67d7a083975836d)
+
+#### Swift 2.2
+> For Swift 2.2, use version <= 3.3.4
+
+#### Swift 2.3
+> For Swift 2.3, use version = 3.3.5
 
 ## Getting Started
 #### Initialization and presentation
@@ -272,49 +281,29 @@ You can merge your branch into the `develop` branch. Any Pull Requests to be wel
 
 ## Change Log
 
-## [3.3.3](https://github.com/zhangao0086/DKImagePickerController/tree/3.3.3) (2016-08-08)
+## [3.4.1](https://github.com/zhangao0086/DKImagePickerController/tree/3.4.1) (2016-10-25)
 
-[Full Changelog](https://github.com/zhangao0086/DKImagePickerController/compare/3.3.2...3.3.3)
+[Full Changelog](https://github.com/zhangao0086/DKImagePickerController/compare/3.4.0...3.4.1)
 
-- Added Carthage support
+- Added french language.
 
-- Added Urdu lozalization
+- Updated the condition of isInCloud.
 
-- Added German localization
+- Add CryptoSwift lib in order to the DKAsset has a unique identifier.
 
-- Added `deselectAssetAtIndex` and `deselectAsset`.
+- Improve scroll performance.
 
-- Added `deselectAllAssets`.
+- Fix crash issue.
 
-- Fixed an issue may cause `takePicture` is incorrect.
+- Added support for asset editing.
 
-- If a camera is not available, don't pops-up "Max photos limit reached".
+- Fix an issue that may cause arrow does not appear.
 
-- The `didCancel` and `didSelectAssets` are executed after completion.
+## [3.4.0](https://github.com/zhangao0086/DKImagePickerController/tree/3.4.0) (2016-09-18)
 
-- Updated DKImagePickerControllerDefaultUIDelegate interface.
+[Full Changelog](https://github.com/zhangao0086/DKImagePickerController/compare/3.3.4...3.4.0)
 
-- Rename `unselectedImage` to `deselectImage`.
-
-- Rename `selectedImage` to `selectImage`. 
-
-- Replace tags with spaces.
-
-## [3.3.0](https://github.com/zhangao0086/DKImagePickerController/tree/3.3.0) (2016-06-17)
-
-[Full Changelog](https://github.com/zhangao0086/DKImagePickerController/compare/3.2.1...3.3.0)
-
-**Merged pull requests:**
-
-- Fix the thumbnails have low quality.
-
-- Added Turkish localization support.
-
-- Added footer view.
-
-- Removed picker singleton.
-
-- Updated DKImagePickerControllerDefaultUIDelegate.
+- Migrating to swift3
 
 > [More logs...](https://github.com/zhangao0086/DKImagePickerController/blob/develop/CHANGELOG.md)
 

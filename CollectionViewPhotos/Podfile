@@ -3,6 +3,6 @@ target 'CollectionViewPhotos' do
 
 use_frameworks!
 
-pod 'DKImagePickerController', '> 0.1'
+pod 'DKImagePickerController', '>= 3.4.1'
 
 end

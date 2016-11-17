@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="21600" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="AqB-sk-7If">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="AqB-sk-7If">
                                 <rect key="frame" x="0.0" y="20" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="500822447.53530699">
                                     <!--2016-11-14 13:20:47 +0000-->

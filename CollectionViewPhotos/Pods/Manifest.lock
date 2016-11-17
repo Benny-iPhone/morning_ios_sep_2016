@@ -1,16 +1,16 @@
 PODS:
-  - DKImagePickerController (3.3.4):
-    - DKImagePickerController/Camera (= 3.3.4)
-    - DKImagePickerController/ImageManager (= 3.3.4)
-  - DKImagePickerController/Camera (3.3.4)
-  - DKImagePickerController/ImageManager (3.3.4)
+  - DKImagePickerController (3.4.2):
+    - DKImagePickerController/Camera (= 3.4.2)
+    - DKImagePickerController/ImageManager (= 3.4.2)
+  - DKImagePickerController/Camera (3.4.2)
+  - DKImagePickerController/ImageManager (3.4.2)
 
 DEPENDENCIES:
-  - DKImagePickerController (> 0.1)
+  - DKImagePickerController (>= 3.4.1)
 
 SPEC CHECKSUMS:
-  DKImagePickerController: 4de1703ad3ba8bc216753447cbb00e482d8d4604
+  DKImagePickerController: 8fc8a42120cb0c9b7982af04d47e0e5b25b5186f
 
-PODFILE CHECKSUM: 8adb974c84f2dac3211983e1419ed6ac5dc00d4a
+PODFILE CHECKSUM: 5d958cd22f0c6fd2e68f5416703aa94828ed172a
 
 COCOAPODS: 1.1.1

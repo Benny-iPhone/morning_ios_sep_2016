@@ -4,18 +4,19 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DKImagePickerController.xcscheme</key>
+		<key>PickerView.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-CollectionViewPhotos.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>B25989951DDDA7E4006D8BD0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
