@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>טסט</string>
+		<string>רביולי</string>
 		<key>desc</key>
 		<string>אאאא
 בבבב
@@ -18,7 +18,7 @@
 		<key>price</key>
 		<integer>5</integer>
 		<key>url</key>
-		<string></string>
+		<string>http://star.mishloah.co.il/image/cache/data/pic%20for%20menu/rbyvly-btth-86-500x500.jpg</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -28,7 +28,7 @@
 		<key>price</key>
 		<integer>3</integer>
 		<key>url</key>
-		<string></string>
+		<string>http://www.10dakot.co.il/wp-content/uploads/2013/07/DSC_0004-%D7%A2%D7%95%D7%AA%D7%A7.jpg</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -38,7 +38,7 @@
 		<key>price</key>
 		<integer>45</integer>
 		<key>url</key>
-		<string></string>
+		<string>http://www.badatz.biz/wp-content/uploads/2015/05/%D7%A4%D7%99%D7%A6%D7%94-%D7%A8%D7%9E%D7%9C%D7%94.jpg</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -51,7 +51,7 @@
 		<key>price</key>
 		<integer>5</integer>
 		<key>url</key>
-		<string></string>
+		<string>http://msc.wcdn.co.il/w/w-700/796196-5.jpg</string>
 	</dict>
 </array>
 </plist>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class FoodCell: UITableViewCell {
     
@@ -52,10 +53,21 @@ class FoodCell: UITableViewCell {
     func configure(_ obj : Food){
         foodTitleLabel.text = obj.title
         foodDescLabel.text = obj.desc
+        
+        if let url = obj.url{
+            foodImageView.sd_setImage(with: url)
+        } else {
+            foodImageView.image = nil
+            foodImageView.sd_cancelCurrentImageLoad()
+        }
     }
     
 
 }
+
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MenuTableView
+//  DropDownTableView
 //
 //  Created by Benny Davidovitz on 21/11/2016.
 //  Copyright © 2016 xcoder.solutions. All rights reserved.
@@ -16,9 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        //UIView.appearance().semanticContentAttribute = .forceRightToLeft
-        
         return true
     }
 

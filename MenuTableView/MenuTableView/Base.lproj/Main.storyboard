@@ -60,7 +60,7 @@
                                     <outlet property="foodDescLabel" destination="mwu-id-JMn" id="1pW-cI-Met"/>
                                     <outlet property="foodImageView" destination="ViR-YP-S7Q" id="KXx-QA-AZ0"/>
                                     <outlet property="foodTitleLabel" destination="oxh-HD-kcV" id="lL4-ep-trB"/>
-                                    <segue destination="PBG-Zv-L67" kind="show" id="krW-Nn-GVf"/>
+                                    <segue destination="PBG-Zv-L67" kind="show" identifier="deatilsSegue" id="krW-Nn-GVf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -75,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="421.60000000000002" y="210.94452773613196"/>
         </scene>
-        <!--View Controller-->
+        <!--Food Details View Controller-->
         <scene sceneID="w3R-2O-PXt">
             <objects>
-                <viewController id="PBG-Zv-L67" sceneMemberID="viewController">
+                <viewController id="PBG-Zv-L67" customClass="FoodDetailsViewController" customModule="MenuTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z97-Kz-KzY"/>
                         <viewControllerLayoutGuide type="bottom" id="VVU-7g-lBh"/>
@@ -100,6 +100,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eD4-W4-xOA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
