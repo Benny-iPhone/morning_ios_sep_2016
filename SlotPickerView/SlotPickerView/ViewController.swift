@@ -98,12 +98,10 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
             
         }
         
-        let win = didWin()
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
             sender.isEnabled = true
             
-            if win{
+            if self.didWin(){
                 self.winPlayer?.play()
                 self.resultLabel.text = "WIN"
             } else {

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>פסטה</string>
+		<key>desc</key>
+		<string>עשויה עבודת יד במחנה נופש בצפון קוריאה</string>
+		<key>price</key>
+		<integer>3</integer>
+		<key>url</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>פיצה</string>
+		<key>desc</key>
+		<string>חמה מהטאבון, כשרה לפסח</string>
+		<key>price</key>
+		<integer>45</integer>
+		<key>url</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>פוקצ׳ה</string>
+		<key>desc</key>
+		<string>ללא קמח, ללא מים, ללא גלוטן, ללא טעם</string>
+		<key>price</key>
+		<integer>5</integer>
+		<key>url</key>
+		<string></string>
+	</dict>
+</array>
+</plist>
