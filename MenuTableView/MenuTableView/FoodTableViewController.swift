@@ -31,6 +31,12 @@ class FoodTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        let obj = tableArray[indexPath.row]
+        return FoodCell.heightFor(obj, tableWidth: tableView.bounds.width)
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.
