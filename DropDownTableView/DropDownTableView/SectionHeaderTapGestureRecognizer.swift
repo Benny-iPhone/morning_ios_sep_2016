@@ -10,4 +10,11 @@ import UIKit
 
 class SectionHeaderTapGestureRecognizer: UITapGestureRecognizer {
 
+    let sectionIndex : Int
+    
+    init(target: Any?, action: Selector?, sectionIndex : Int) {
+        self.sectionIndex = sectionIndex
+        super.init(target: target, action: action)
+    }
+    
 }

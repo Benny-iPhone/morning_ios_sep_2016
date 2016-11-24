@@ -12,6 +12,9 @@
 		B29F261D1DE33028005E53E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29F261B1DE33028005E53E9 /* Main.storyboard */; };
 		B29F261F1DE33028005E53E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B29F261E1DE33028005E53E9 /* Assets.xcassets */; };
 		B29F26221DE33028005E53E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29F26201DE33028005E53E9 /* LaunchScreen.storyboard */; };
+		B29F262A1DE334A1005E53E9 /* SectionHeaderTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F26291DE334A1005E53E9 /* SectionHeaderTapGestureRecognizer.swift */; };
+		B29F262D1DE33788005E53E9 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F262C1DE33788005E53E9 /* SectionHeaderView.swift */; };
+		B29F262F1DE3379F005E53E9 /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B29F262E1DE3379F005E53E9 /* SectionHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		B29F261E1DE33028005E53E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B29F26211DE33028005E53E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B29F26231DE33028005E53E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29F26291DE334A1005E53E9 /* SectionHeaderTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderTapGestureRecognizer.swift; sourceTree = "<group>"; };
+		B29F262C1DE33788005E53E9 /* SectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		B29F262E1DE3379F005E53E9 /* SectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 		B29F26161DE33028005E53E9 /* DropDownTableView */ = {
 			isa = PBXGroup;
 			children = (
+				B29F262B1DE33765005E53E9 /* view */,
 				B29F26171DE33028005E53E9 /* AppDelegate.swift */,
 				B29F26191DE33028005E53E9 /* ViewController.swift */,
 				B29F261B1DE33028005E53E9 /* Main.storyboard */,
@@ -62,6 +69,16 @@
 				B29F26231DE33028005E53E9 /* Info.plist */,
 			);
 			path = DropDownTableView;
+			sourceTree = "<group>";
+		};
+		B29F262B1DE33765005E53E9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B29F26291DE334A1005E53E9 /* SectionHeaderTapGestureRecognizer.swift */,
+				B29F262C1DE33788005E53E9 /* SectionHeaderView.swift */,
+				B29F262E1DE3379F005E53E9 /* SectionHeaderView.xib */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +143,7 @@
 				B29F26221DE33028005E53E9 /* LaunchScreen.storyboard in Resources */,
 				B29F261F1DE33028005E53E9 /* Assets.xcassets in Resources */,
 				B29F261D1DE33028005E53E9 /* Main.storyboard in Resources */,
+				B29F262F1DE3379F005E53E9 /* SectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B29F261A1DE33028005E53E9 /* ViewController.swift in Sources */,
+				B29F262A1DE334A1005E53E9 /* SectionHeaderTapGestureRecognizer.swift in Sources */,
 				B29F26181DE33028005E53E9 /* AppDelegate.swift in Sources */,
+				B29F262D1DE33788005E53E9 /* SectionHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
