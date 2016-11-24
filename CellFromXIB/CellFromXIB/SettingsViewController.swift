@@ -38,21 +38,40 @@ class SettingsViewController: UIViewController , UITableViewDataSource, Settings
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! SettingsTableViewCell
         
         let row = SettingsTableViewCell.Row(rawValue: indexPath.row)!
-        cell.configure(row, info: false)
+        cell.configure(row, info: stateFor(row))
         cell.delegate = self
         
         return cell
         
     }
     
+    func stateFor(_ row : SettingsTableViewCell.Row) -> Bool{
+        switch row {
+        case .sound:
+            return Settings.shared.sound
+        case .wifiOnly:
+            return Settings.shared.wifiOnly
+        }
+    }
+    
     //MARK: - SettingsTableViewCell Delegate
     func settingsTableViewCell(_ cell: SettingsTableViewCell, didChangeState state: Bool) {
         
-        guard let indexPath = tableView.indexPath(for: cell) else {
+        guard let indexPath = tableView.indexPath(for: cell),
+        let row = SettingsTableViewCell.Row(rawValue: indexPath.row)
+        else {
             return
         }
         
-        print(state)
+        
+        switch row {
+        case .sound:
+            Settings.shared.sound = state
+        case .wifiOnly:
+            Settings.shared.wifiOnly = state
+        }
+        
+//        let sandbox = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
     }
 
 }

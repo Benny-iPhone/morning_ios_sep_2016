@@ -14,6 +14,7 @@
 		B2A7270F1DE6CE1D002EF7A3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A7270E1DE6CE1D002EF7A3 /* SettingsViewController.swift */; };
 		B2A727111DE6CE3D002EF7A3 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A727101DE6CE3D002EF7A3 /* SettingsTableViewCell.swift */; };
 		B2A727131DE6CF6B002EF7A3 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A727121DE6CF6B002EF7A3 /* SettingsTableViewCell.xib */; };
+		B2A727151DE6F1D7002EF7A3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A727141DE6F1D7002EF7A3 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B2A7270E1DE6CE1D002EF7A3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B2A727101DE6CE3D002EF7A3 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		B2A727121DE6CF6B002EF7A3 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		B2A727141DE6F1D7002EF7A3 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +61,40 @@
 			isa = PBXGroup;
 			children = (
 				B2A726FC1DE6CB42002EF7A3 /* AppDelegate.swift */,
-				B2A7270E1DE6CE1D002EF7A3 /* SettingsViewController.swift */,
-				B2A727101DE6CE3D002EF7A3 /* SettingsTableViewCell.swift */,
-				B2A727121DE6CF6B002EF7A3 /* SettingsTableViewCell.xib */,
+				B2A727161DE6F1DC002EF7A3 /* model */,
+				B2A727171DE6F1E5002EF7A3 /* controller */,
+				B2A727181DE6F1EC002EF7A3 /* view */,
 				B2A727001DE6CB42002EF7A3 /* Main.storyboard */,
 				B2A727031DE6CB42002EF7A3 /* Assets.xcassets */,
 				B2A727051DE6CB42002EF7A3 /* LaunchScreen.storyboard */,
 				B2A727081DE6CB42002EF7A3 /* Info.plist */,
 			);
 			path = CellFromXIB;
+			sourceTree = "<group>";
+		};
+		B2A727161DE6F1DC002EF7A3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B2A727141DE6F1D7002EF7A3 /* Settings.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		B2A727171DE6F1E5002EF7A3 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				B2A7270E1DE6CE1D002EF7A3 /* SettingsViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		B2A727181DE6F1EC002EF7A3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B2A727101DE6CE3D002EF7A3 /* SettingsTableViewCell.swift */,
+				B2A727121DE6CF6B002EF7A3 /* SettingsTableViewCell.xib */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +172,7 @@
 			files = (
 				B2A726FD1DE6CB42002EF7A3 /* AppDelegate.swift in Sources */,
 				B2A7270F1DE6CE1D002EF7A3 /* SettingsViewController.swift in Sources */,
+				B2A727151DE6F1D7002EF7A3 /* Settings.swift in Sources */,
 				B2A727111DE6CE3D002EF7A3 /* SettingsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
