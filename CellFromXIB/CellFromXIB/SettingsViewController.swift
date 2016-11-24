@@ -47,6 +47,11 @@ class SettingsViewController: UIViewController , UITableViewDataSource, Settings
     
     //MARK: - SettingsTableViewCell Delegate
     func settingsTableViewCell(_ cell: SettingsTableViewCell, didChangeState state: Bool) {
+        
+        guard let indexPath = tableView.indexPath(for: cell) else {
+            return
+        }
+        
         print(state)
     }
 

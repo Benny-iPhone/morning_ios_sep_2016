@@ -16,6 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        /*
+        let userDefaults = UserDefaults.standard
+        if let firstRun = userDefaults.object(forKey: "first_run") as? Bool{
+            print("not first run")
+        } else {
+            userDefaults.set(true, forKey: "first_run")
+            userDefaults.synchronize()
+            print("first run")
+        }
+
+        if let runDate = userDefaults.object(forKey: "last_run") as? Date{
+            print(runDate)
+        }
+        
+        userDefaults.set(Date(), forKey: "last_run")
+        userDefaults.synchronize()
+        */
+        //userDefaults.removeObject(forKey: "key")
+        
         return true
     }
 
