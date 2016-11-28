@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="City" representedClassName="City" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
+        <attribute name="birth_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="first_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_file_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="last_name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="City" syncable="YES"/>
     </entity>
     <fetchRequest name="all_people" entity="Person" predicateString="first_name CONTAINS &quot;benny&quot;"/>
     <elements>
-        <element name="City" positionX="-54" positionY="9" width="128" height="60"/>
-        <element name="Person" positionX="-344" positionY="45" width="128" height="90"/>
+        <element name="Person" positionX="-344" positionY="45" width="128" height="105"/>
     </elements>
 </model>

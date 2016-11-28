@@ -107,32 +107,70 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b6-1o-Bqw">
-                                <rect key="frame" x="129" y="184" width="116" height="30"/>
+                                <rect key="frame" x="129" y="234" width="116" height="30"/>
                                 <state key="normal" title="Add To database"/>
                                 <connections>
                                     <action selector="buttonAction:" destination="Rle-ao-8zb" eventType="touchUpInside" id="3eL-ph-pJ2"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birth Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tIl-r1-Ywz">
+                                <rect key="frame" x="20" y="184" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vk1-ah-eAT">
+                                <rect key="frame" x="67" y="284" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="QjX-yL-fjJ"/>
+                                    <constraint firstAttribute="height" constant="128" id="af2-Zm-dlH"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="W4p-Wb-Hee" appends="YES" id="xHQ-YY-51C"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="5b6-1o-Bqw" firstAttribute="top" secondItem="tIl-r1-Ywz" secondAttribute="bottom" constant="20" id="DNo-nr-xYc"/>
                             <constraint firstItem="5b6-1o-Bqw" firstAttribute="centerX" secondItem="1Sh-ah-b04" secondAttribute="centerX" id="H2l-ec-M3s"/>
+                            <constraint firstItem="tIl-r1-Ywz" firstAttribute="leading" secondItem="1Sh-ah-b04" secondAttribute="leading" id="XBL-g1-1eC"/>
                             <constraint firstItem="1Sh-ah-b04" firstAttribute="top" secondItem="sTE-eX-kSs" secondAttribute="bottom" constant="20" id="Zfc-gz-dO3"/>
+                            <constraint firstItem="tIl-r1-Ywz" firstAttribute="trailing" secondItem="1Sh-ah-b04" secondAttribute="trailing" id="adv-mX-9W3"/>
                             <constraint firstItem="sTE-eX-kSs" firstAttribute="leading" secondItem="fxs-nd-yUg" secondAttribute="leading" constant="20" id="akP-XZ-z28"/>
+                            <constraint firstItem="Vk1-ah-eAT" firstAttribute="centerX" secondItem="fxs-nd-yUg" secondAttribute="centerX" id="bdk-OM-SwU"/>
                             <constraint firstItem="1Sh-ah-b04" firstAttribute="trailing" secondItem="sTE-eX-kSs" secondAttribute="trailing" id="dVa-pW-sTn"/>
                             <constraint firstItem="1Sh-ah-b04" firstAttribute="leading" secondItem="sTE-eX-kSs" secondAttribute="leading" id="iEU-SB-wPt"/>
-                            <constraint firstItem="5b6-1o-Bqw" firstAttribute="top" secondItem="1Sh-ah-b04" secondAttribute="bottom" constant="20" id="jWO-Rb-hHT"/>
                             <constraint firstItem="sTE-eX-kSs" firstAttribute="top" secondItem="ne3-yl-CN5" secondAttribute="bottom" constant="20" id="mxd-Fu-30v"/>
                             <constraint firstAttribute="trailing" secondItem="sTE-eX-kSs" secondAttribute="trailing" constant="20" id="sLr-7z-F35"/>
+                            <constraint firstItem="Vk1-ah-eAT" firstAttribute="top" secondItem="5b6-1o-Bqw" secondAttribute="bottom" constant="20" id="uab-6B-ADr"/>
+                            <constraint firstItem="tIl-r1-Ywz" firstAttribute="top" secondItem="1Sh-ah-b04" secondAttribute="bottom" constant="20" id="zGa-cM-8gR"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wHu-KE-Wtx" appends="YES" id="sDF-yE-xgH"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="actionButton" destination="5b6-1o-Bqw" id="4jM-oI-dyN"/>
+                        <outlet property="birthdateTextField" destination="tIl-r1-Ywz" id="6ay-ES-m7x"/>
                         <outlet property="firstNameTextField" destination="sTE-eX-kSs" id="YbS-dN-l2u"/>
+                        <outlet property="imageView" destination="Vk1-ah-eAT" id="cB7-LX-MRD"/>
                         <outlet property="lastNameTextField" destination="1Sh-ah-b04" id="yQg-o5-lS2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7v-7H-WfM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="W4p-Wb-Hee">
+                    <connections>
+                        <action selector="takePictureAction:" destination="Rle-ao-8zb" id="ebM-pq-Tir"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wHu-KE-Wtx">
+                    <connections>
+                        <action selector="closeKeyboard:" destination="Rle-ao-8zb" id="GVQ-lM-GK9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1786" y="793"/>
         </scene>

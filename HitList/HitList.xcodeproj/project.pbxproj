@@ -16,6 +16,7 @@
 		B2A7275F1DE71306002EF7A3 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A7275E1DE71306002EF7A3 /* DBManager.swift */; };
 		B2A727611DE71A36002EF7A3 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A727601DE71A36002EF7A3 /* PersonViewController.swift */; };
 		B2A727631DE71B39002EF7A3 /* PersonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A727621DE71B39002EF7A3 /* PersonExt.swift */; };
+		B2C65AEB1DEC309C00F5CF2A /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C65AEA1DEC309C00F5CF2A /* ImageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		B2A7275E1DE71306002EF7A3 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		B2A727601DE71A36002EF7A3 /* PersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		B2A727621DE71B39002EF7A3 /* PersonExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonExt.swift; sourceTree = "<group>"; };
+		B2C65AE91DEC26D900F5CF2A /* HitList 1.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "HitList 1.2.xcdatamodel"; sourceTree = "<group>"; };
+		B2C65AEA1DEC309C00F5CF2A /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,7 @@
 			children = (
 				B2A7275E1DE71306002EF7A3 /* DBManager.swift */,
 				B2A727621DE71B39002EF7A3 /* PersonExt.swift */,
+				B2C65AEA1DEC309C00F5CF2A /* ImageManager.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -158,6 +162,7 @@
 			files = (
 				B2A727611DE71A36002EF7A3 /* PersonViewController.swift in Sources */,
 				B2A727511DE7127D002EF7A3 /* HitList.xcdatamodeld in Sources */,
+				B2C65AEB1DEC309C00F5CF2A /* ImageManager.swift in Sources */,
 				B2A727631DE71B39002EF7A3 /* PersonExt.swift in Sources */,
 				B2A7274B1DE7127C002EF7A3 /* ViewController.swift in Sources */,
 				B2A727491DE7127C002EF7A3 /* AppDelegate.swift in Sources */,
@@ -321,6 +326,7 @@
 				B2A7275C1DE7127D002EF7A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -328,9 +334,10 @@
 		B2A7274F1DE7127D002EF7A3 /* HitList.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				B2C65AE91DEC26D900F5CF2A /* HitList 1.2.xcdatamodel */,
 				B2A727501DE7127D002EF7A3 /* HitList.xcdatamodel */,
 			);
-			currentVersion = B2A727501DE7127D002EF7A3 /* HitList.xcdatamodel */;
+			currentVersion = B2C65AE91DEC26D900F5CF2A /* HitList 1.2.xcdatamodel */;
 			path = HitList.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
