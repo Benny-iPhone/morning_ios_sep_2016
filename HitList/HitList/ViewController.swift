@@ -47,13 +47,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        let obj = controller.object(at: indexPath)
+        let obj : Person = controller.object(at: indexPath)
         cell.textLabel?.text = obj.first_name
         cell.detailTextLabel?.text = obj.last_name
         
         return cell
         
     }
+    
+    //MARK: - UITableView Delegate
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else {
+            return
+        }
+        
+        //remove from db
+        let person = controller.object(at: indexPath)
+        person.dbDelete()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     
     //MARK: - NSFetchedResultsController Delegate -
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
@@ -70,23 +91,52 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         switch type {
         case .insert:
             listTableView.insertSections(indexSet, with: .automatic)
+        case .delete:
+            listTableView.deleteSections(indexSet, with: .automatic)
         default:
             return
         }
         
     }
     
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+    func controller(_ _controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         
         switch type {
         case .insert:
             listTableView.insertRows(at: [newIndexPath!], with: .automatic)
+        case .delete:
+            listTableView.deleteRows(at: [indexPath!], with: .automatic)
+        case .update:
+            //make flicker when using images
+            //listTableView.reloadRows(at: [indexPath!], with: .automatic)
+            
+            let cell = listTableView.cellForRow(at: indexPath!)
+            let person = controller.object(at: indexPath!)
+            cell?.textLabel?.text = person.first_name
+            cell?.detailTextLabel?.text = person.last_name
+ 
         default:
             return
         }
         
     }
     
+    //MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let indexPath = listTableView.indexPathForSelectedRow,
+            let nextVC = segue.destination as? PersonViewController,
+            segue.identifier == "update_segue" {
+            //pass person object to PersonViewController
+            let p = controller.object(at: indexPath)
+            nextVC.person = p
+            
+            
+        }
+        
+        
+    }
     
 }
 

@@ -12,6 +12,28 @@ import CoreData
 extension Person{
     convenience init(){
         //Person(context: <#T##NSManagedObjectContext#>)
-        self.init(context: DBManager.manager.persistentContainer.viewContext)
+        self.init(context: DBManager.manager.context)
+    }
+    
+    func dbDelete(){
+        let manager = DBManager.manager
+        manager.context.delete(self)
+        manager.saveContext()
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

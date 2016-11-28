@@ -13,6 +13,12 @@ class DBManager: NSObject {
 
     static let manager = DBManager()
     
+    var context : NSManagedObjectContext{
+        get{
+            return persistentContainer.viewContext
+        }
+    }
+    
     // MARK: - Core Data stack
     
     lazy var persistentContainer: NSPersistentContainer = {
