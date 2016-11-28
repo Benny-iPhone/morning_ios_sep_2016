@@ -1,12 +1,18 @@
 PODS:
   - Alamofire (4.1.0)
+  - CCBottomRefreshControl (0.5.1):
+    - Masonry (~> 0.6.2)
+  - Masonry (0.6.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - CCBottomRefreshControl
 
 SPEC CHECKSUMS:
   Alamofire: e266cf991b933498df791e645e0d8ac294492153
+  CCBottomRefreshControl: 57a596348855260f627ffc2b311328ed15b94877
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
 
-PODFILE CHECKSUM: 551191f3a38b50b795d8eabbf76fa70187beb8a6
+PODFILE CHECKSUM: e1551352aff19629598d5fcb35a58301e4289e03
 
 COCOAPODS: 1.1.1

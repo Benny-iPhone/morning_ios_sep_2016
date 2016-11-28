@@ -7,15 +7,35 @@
 //
 
 import UIKit
+import CCBottomRefreshControl
 
-class SearchTableViewController: UITableViewController {
+class SearchTableViewController: UITableViewController , UISearchBarDelegate{
+    
     //searchBar's delegate is self
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var typeSegmentedControl: UISegmentedControl!
     
     var term : String?
     var tableArray : [Item] = []
-    var page : Int = 1
+    var page : Int = 1{
+        didSet{
+            getData()
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(SearchTableViewController.getData), for: .valueChanged)
+        
+        tableView.bottomRefreshControl = UIRefreshControl()
+        tableView.bottomRefreshControl.addTarget(self, action: #selector(SearchTableViewController.nextPage), for: .valueChanged)
+    }
+    
+    func nextPage(){
+        page += 1
+    }
     
     func currentType() -> Item.ItemType?{
         switch typeSegmentedControl.selectedSegmentIndex {
@@ -36,12 +56,17 @@ class SearchTableViewController: UITableViewController {
         guard let term = term,
             !term.isEmpty
         else {
+            refreshControl?.endRefreshing()
+            tableView.bottomRefreshControl.endRefreshing()
             tableArray = []
             tableView.reloadData()
             return
         }
         
         APIManager.manager.omdb(search: term, type: currentType(), page: page, completion: { (arr,err) in
+            
+            self.refreshControl?.endRefreshing()
+            self.tableView.bottomRefreshControl.endRefreshing()
             
             guard let arr = arr else {
                 //TODO: - handle error
@@ -63,34 +88,45 @@ class SearchTableViewController: UITableViewController {
         
     }
     
+    //MARK: - UISearchBar Delegate
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = nil
+        page = 1
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        page = 1
+        searchBar.resignFirstResponder()
+    }
+    
     //MARK: - IBAction
     
     @IBAction func segmentedControlAction(_ sender: Any) {
+        page = 1
     }
 
     
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return tableArray.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let identifier = SearchTableViewCell.identifier
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! SearchTableViewCell
 
         // Configure the cell...
+        let item = tableArray[indexPath.row]
+        cell.configure(item)
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

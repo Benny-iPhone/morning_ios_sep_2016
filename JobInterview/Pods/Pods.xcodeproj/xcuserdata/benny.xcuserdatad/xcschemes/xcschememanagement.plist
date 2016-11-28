@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CCBottomRefreshControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-JobInterview.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1657930304B84232F19A0D421D9E1A8A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F9BD2021F413A05ADD489E85B9924DD4</key>
+		<key>DD1559592F5FECF5E008347EC681DF67</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA188AD54A2C33423AE68DD2A5A17D81</key>
 		<dict>
 			<key>primary</key>
 			<true/>
