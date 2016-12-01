@@ -12,9 +12,30 @@ import Alamofire
 private let omdbURL = "https://www.omdbapi.com/"
 
 typealias SearchCompletion = (_ array : [Item]?, _ error : Error?) -> Void
+typealias FetchCompletion = (_ obj : DetailedItem?, _ error : Error?) -> Void
 
 class APIManager: NSObject {
     static let manager = APIManager()
+    
+    func fetchObject(by omdbID : String, completion : @escaping FetchCompletion){
+        
+        let params : [String:Any] = [
+            "i":omdbID
+        ]
+        
+        Alamofire.request(omdbURL, parameters: params).responseJSON { (response) in
+            
+            guard let json = response.result.value as? [String:Any] else {
+                completion(nil,response.result.error)
+                return
+            }
+            
+            let obj = DetailedItem(json)
+            completion(obj,nil)
+            
+        }
+        
+    }
     
     func omdb(search term : String, type : Item.ItemType? = nil, page : Int = 1, completion : @escaping SearchCompletion){
         

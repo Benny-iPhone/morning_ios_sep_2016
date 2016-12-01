@@ -68,6 +68,7 @@
                                     <outlet property="nameLabel" destination="nZP-IV-uCc" id="Uru-Bs-TRO"/>
                                     <outlet property="posterImageView" destination="oeW-oE-QMe" id="Zci-ax-Ir2"/>
                                     <outlet property="yearLabel" destination="XD3-UG-N9u" id="MEQ-RC-kXn"/>
+                                    <segue destination="utF-nF-1uZ" kind="show" identifier="details_segue" id="mEt-Wl-bh2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -99,6 +100,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nkj-Ka-7lX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2007.2" y="12.143928035982009"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="UQ1-n5-u5Y">
+            <objects>
+                <viewController id="utF-nF-1uZ" customClass="DetailsViewController" customModule="JobInterview" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ew-kT-HU6"/>
+                        <viewControllerLayoutGuide type="bottom" id="k9c-oV-aph"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yFq-fb-n1w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uhT-yr-ajE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H5R-42-afW">
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uhT-yr-ajE" firstAttribute="leading" secondItem="yFq-fb-n1w" secondAttribute="leading" id="2E8-XV-Run"/>
+                            <constraint firstItem="k9c-oV-aph" firstAttribute="top" secondItem="uhT-yr-ajE" secondAttribute="bottom" id="3ly-HA-g1B"/>
+                            <constraint firstAttribute="trailing" secondItem="H5R-42-afW" secondAttribute="trailing" constant="20" id="7Mn-1D-LZx"/>
+                            <constraint firstItem="uhT-yr-ajE" firstAttribute="top" secondItem="5ew-kT-HU6" secondAttribute="bottom" id="JpG-ui-NaO"/>
+                            <constraint firstAttribute="trailing" secondItem="uhT-yr-ajE" secondAttribute="trailing" id="N8T-re-kKE"/>
+                            <constraint firstItem="k9c-oV-aph" firstAttribute="top" secondItem="H5R-42-afW" secondAttribute="bottom" constant="20" id="YW5-o7-oRt"/>
+                            <constraint firstItem="H5R-42-afW" firstAttribute="leading" secondItem="yFq-fb-n1w" secondAttribute="leading" constant="20" id="ccm-vg-WFC"/>
+                            <constraint firstItem="H5R-42-afW" firstAttribute="top" secondItem="5ew-kT-HU6" secondAttribute="bottom" constant="20" id="fiD-8g-dLs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="uhT-yr-ajE" id="dhg-zV-gho"/>
+                        <outlet property="textView" destination="H5R-42-afW" id="aCR-QY-lXE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rkt-N4-waX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2861.5999999999999" y="11.244377811094454"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dd0-9j-a6l">

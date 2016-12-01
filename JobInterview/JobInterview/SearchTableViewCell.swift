@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class SearchTableViewCell: UITableViewCell {
 
@@ -19,6 +20,13 @@ class SearchTableViewCell: UITableViewCell {
     func configure(_ item : Item){
         nameLabel.text = item.title
         yearLabel.text = item.year
+        
+        if let url = item.poster{
+            posterImageView.sd_setImage(with: url)
+        } else {
+            posterImageView.sd_cancelCurrentImageLoad()
+            posterImageView.image = nil
+        }
     }
 }
 

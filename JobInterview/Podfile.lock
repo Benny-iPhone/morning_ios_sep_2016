@@ -3,16 +3,24 @@ PODS:
   - CCBottomRefreshControl (0.5.1):
     - Masonry (~> 0.6.2)
   - Masonry (0.6.4)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - Toast (3.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - CCBottomRefreshControl
+  - SDWebImage (~> 3.8)
+  - Toast (~> 3.1.0)
 
 SPEC CHECKSUMS:
   Alamofire: e266cf991b933498df791e645e0d8ac294492153
   CCBottomRefreshControl: 57a596348855260f627ffc2b311328ed15b94877
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
 
-PODFILE CHECKSUM: e1551352aff19629598d5fcb35a58301e4289e03
+PODFILE CHECKSUM: a48c296064e50a843de291940b7ffe7e936b9e0f
 
 COCOAPODS: 1.1.1
