@@ -25,12 +25,16 @@ class SearchTableViewController: UITableViewController , UISearchBarDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //top
         self.refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: #selector(SearchTableViewController.getData), for: .valueChanged)
-        
+        refreshControl?.addTarget(self, action: #selector(SearchTableViewController.reloadData), for: .valueChanged)
+        //bottom
         tableView.bottomRefreshControl = UIRefreshControl()
         tableView.bottomRefreshControl.addTarget(self, action: #selector(SearchTableViewController.nextPage), for: .valueChanged)
+    }
+    
+    func reloadData(){
+        page = 1
     }
     
     func nextPage(){
@@ -53,13 +57,17 @@ class SearchTableViewController: UITableViewController , UISearchBarDelegate{
             term = searchBar.text
         }
         
+        func emptyTableView(){
+            self.refreshControl?.endRefreshing()
+            self.tableView.bottomRefreshControl.endRefreshing()
+            self.tableArray = []
+            self.tableView.reloadData()
+        }
+        
         guard let term = term,
             !term.isEmpty
         else {
-            refreshControl?.endRefreshing()
-            tableView.bottomRefreshControl.endRefreshing()
-            tableArray = []
-            tableView.reloadData()
+            emptyTableView()
             return
         }
         
