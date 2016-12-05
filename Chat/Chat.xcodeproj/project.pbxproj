@@ -18,6 +18,7 @@
 		B2C65B3E1DF04DEF00F5CF2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C65B3D1DF04DEF00F5CF2A /* LoginViewController.swift */; };
 		B2C65B401DF0557B00F5CF2A /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C65B3F1DF0557B00F5CF2A /* FlowController.swift */; };
 		B2C65B431DF05D5A00F5CF2A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C65B421DF05D5A00F5CF2A /* ChatViewController.swift */; };
+		B2C65B451DF5500500F5CF2A /* Empty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C65B441DF5500500F5CF2A /* Empty.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B2C65B3D1DF04DEF00F5CF2A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B2C65B3F1DF0557B00F5CF2A /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		B2C65B421DF05D5A00F5CF2A /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		B2C65B441DF5500500F5CF2A /* Empty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Empty.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				B2C65B3B1DF04DDC00F5CF2A /* controller */,
 				B2C65B391DF04B7700F5CF2A /* Login.storyboard */,
 				B2C65B291DF0444500F5CF2A /* Main.storyboard */,
+				B2C65B441DF5500500F5CF2A /* Empty.storyboard */,
 				B2C65B2C1DF0444500F5CF2A /* Assets.xcassets */,
 				B2C65B2E1DF0444500F5CF2A /* LaunchScreen.storyboard */,
 				B2C65B311DF0444500F5CF2A /* Info.plist */,
@@ -189,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C65B451DF5500500F5CF2A /* Empty.storyboard in Resources */,
 				B2C65B301DF0444500F5CF2A /* LaunchScreen.storyboard in Resources */,
 				B2C65B381DF047A800F5CF2A /* GoogleService-Info.plist in Resources */,
 				B2C65B2D1DF0444500F5CF2A /* Assets.xcassets in Resources */,
