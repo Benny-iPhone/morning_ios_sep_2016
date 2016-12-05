@@ -17,6 +17,12 @@ class ChatViewController: JSQMessagesViewController {
     var outgoingBubbleImageView: JSQMessagesBubbleImage!
     var incomingBubbleImageView: JSQMessagesBubbleImage!
 
+    //when created from storyboard
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        _ = DBManager.manager
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,23 +40,49 @@ class ChatViewController: JSQMessagesViewController {
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
         //simulation
+        /*
         let msg1 = JSQMessage(senderId: "foo", displayName: "foo", text: "Hi There")
         let msg2 = JSQMessage(senderId: self.senderId, displayName: self.senderDisplayName, text: "Who is it?")
         messages += [msg1!,msg2!]
         
         self.finishReceivingMessage()
+        */
+        let name = Notification.Name(rawValue: DBManager.kNewChatMessageNotification)
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.handle(_:)), name: name, object: nil)
+    }
+    
+    //avoid zombie
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    func handle(_ note : Notification){
+        if let msg = note.object as? ChatMessage{
+            messages.append(msg.message())
+            self.finishReceivingMessage()
+            
+            if msg.uid == self.senderId{
+                JSQSystemSoundPlayer.jsq_playMessageSentSound()
+            } else {
+                JSQSystemSoundPlayer.jsq_playMessageReceivedSound()
+            }
+        }
     }
     
     //MARK: - Send
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         
+        DBManager.manager.createChatMessage(with: text)
+        self.finishSendingMessage()
+        
+        /*
         if let msg = JSQMessage(senderId: self.senderId, displayName: self.senderDisplayName, text: text){
             messages.append(msg)
             self.finishSendingMessage()
             
             JSQSystemSoundPlayer.jsq_playMessageSentSound()
-        }
+        }*/
         
     }
     
@@ -81,5 +113,39 @@ class ChatViewController: JSQMessagesViewController {
         return nil
     }
     
+    //top label
+    
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString! {
+        
+        let msg = messages[indexPath.item]
+        if msg.senderId == self.senderId{
+            return NSAttributedString(string: "me")
+        } else {
+            let name = msg.senderDisplayName
+            return NSAttributedString(string: name!)
+        }
+        
+    }
+
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat {
+        return 14
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

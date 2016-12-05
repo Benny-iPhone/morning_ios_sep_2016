@@ -19,6 +19,8 @@
 		B2C65B401DF0557B00F5CF2A /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C65B3F1DF0557B00F5CF2A /* FlowController.swift */; };
 		B2C65B431DF05D5A00F5CF2A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C65B421DF05D5A00F5CF2A /* ChatViewController.swift */; };
 		B2C65B451DF5500500F5CF2A /* Empty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C65B441DF5500500F5CF2A /* Empty.storyboard */; };
+		B2C65B481DF5580F00F5CF2A /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C65B471DF5580F00F5CF2A /* DBManager.swift */; };
+		B2C65B4A1DF5656400F5CF2A /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C65B491DF5656400F5CF2A /* ChatMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		B2C65B3F1DF0557B00F5CF2A /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		B2C65B421DF05D5A00F5CF2A /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B2C65B441DF5500500F5CF2A /* Empty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Empty.storyboard; sourceTree = "<group>"; };
+		B2C65B471DF5580F00F5CF2A /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		B2C65B491DF5656400F5CF2A /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			children = (
 				B2C65B251DF0444500F5CF2A /* AppDelegate.swift */,
 				B2C65B271DF0444500F5CF2A /* ViewController.swift */,
+				B2C65B461DF557F300F5CF2A /* model */,
 				B2C65B3B1DF04DDC00F5CF2A /* controller */,
 				B2C65B391DF04B7700F5CF2A /* Login.storyboard */,
 				B2C65B291DF0444500F5CF2A /* Main.storyboard */,
@@ -128,6 +133,15 @@
 				B2C65B421DF05D5A00F5CF2A /* ChatViewController.swift */,
 			);
 			name = main;
+			sourceTree = "<group>";
+		};
+		B2C65B461DF557F300F5CF2A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B2C65B471DF5580F00F5CF2A /* DBManager.swift */,
+				B2C65B491DF5656400F5CF2A /* ChatMessage.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +270,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C65B4A1DF5656400F5CF2A /* ChatMessage.swift in Sources */,
 				B2C65B3E1DF04DEF00F5CF2A /* LoginViewController.swift in Sources */,
+				B2C65B481DF5580F00F5CF2A /* DBManager.swift in Sources */,
 				B2C65B281DF0444500F5CF2A /* ViewController.swift in Sources */,
 				B2C65B261DF0444500F5CF2A /* AppDelegate.swift in Sources */,
 				B2C65B431DF05D5A00F5CF2A /* ChatViewController.swift in Sources */,
