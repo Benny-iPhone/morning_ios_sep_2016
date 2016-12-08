@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RestAPIProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSS-mz-abS">
+                                <rect key="frame" x="154" y="57" width="68" height="30"/>
+                                <state key="normal" title="find posts"/>
+                                <connections>
+                                    <action selector="demoRequestAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJd-0e-rXo"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TkB-tf-2sk">
+                                <rect key="frame" x="155" y="95" width="65" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jq1-WO-99b">
+                                <rect key="frame" x="139" y="190" width="97" height="30"/>
+                                <state key="normal" title="comments api"/>
+                                <connections>
+                                    <action selector="commentsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lz3-hQ-2Zf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type something" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DMv-fN-CUY">
+                                <rect key="frame" x="126.5" y="144" width="122" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DMv-fN-CUY" firstAttribute="centerX" secondItem="TkB-tf-2sk" secondAttribute="centerX" id="1UU-4k-Ehf"/>
+                            <constraint firstItem="TkB-tf-2sk" firstAttribute="centerX" secondItem="aSS-mz-abS" secondAttribute="centerX" id="5vg-gp-OWx"/>
+                            <constraint firstItem="jq1-WO-99b" firstAttribute="top" secondItem="DMv-fN-CUY" secondAttribute="bottom" constant="16" id="CVA-In-PRM"/>
+                            <constraint firstItem="jq1-WO-99b" firstAttribute="centerX" secondItem="DMv-fN-CUY" secondAttribute="centerX" id="SiO-cQ-jPu"/>
+                            <constraint firstItem="aSS-mz-abS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gU7-CC-j4Z"/>
+                            <constraint firstItem="aSS-mz-abS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="hfJ-cc-m1A"/>
+                            <constraint firstItem="DMv-fN-CUY" firstAttribute="top" secondItem="TkB-tf-2sk" secondAttribute="bottom" constant="19" id="rWa-im-W7y"/>
+                            <constraint firstItem="TkB-tf-2sk" firstAttribute="top" secondItem="aSS-mz-abS" secondAttribute="bottom" constant="8" id="tCX-Oc-scC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="DMv-fN-CUY" id="aso-Rw-Ul2"/>
+                        <outlet property="textField" destination="TkB-tf-2sk" id="9XT-Bh-U4q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

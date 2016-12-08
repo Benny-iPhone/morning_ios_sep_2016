@@ -8,10 +8,23 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
-class Branch: NSObject {
+class Branch: NSObject , MKAnnotation{
     let location : CLLocation
     let name : String
+    
+    var coordinate: CLLocationCoordinate2D{
+        get{
+            return location.coordinate
+        }
+    }
+    
+    var title: String?{
+        get{
+            return name
+        }
+    }
     
     init(name : String, latitude : CLLocationDegrees, longitude : CLLocationDegrees) {
         

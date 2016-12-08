@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B29DFCD81DF954580093380C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29DFCD71DF954580093380C /* MapViewController.swift */; };
 		B2C65B581DF5837500F5CF2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C65B571DF5837500F5CF2A /* AppDelegate.swift */; };
 		B2C65B5D1DF5837500F5CF2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C65B5B1DF5837500F5CF2A /* Main.storyboard */; };
 		B2C65B5F1DF5837600F5CF2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C65B5E1DF5837600F5CF2A /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B29DFCD71DF954580093380C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B2C65B541DF5837500F5CF2A /* Location.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Location.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C65B571DF5837500F5CF2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C65B5C1DF5837500F5CF2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				B2C65B721DF59D3100F5CF2A /* BranchesViewController.swift */,
 				B2C65B741DF5A8E700F5CF2A /* BranchDetailsViewController.swift */,
+				B29DFCD71DF954580093380C /* MapViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2C65B731DF59D3100F5CF2A /* BranchesViewController.swift in Sources */,
+				B29DFCD81DF954580093380C /* MapViewController.swift in Sources */,
 				B2C65B751DF5A8E700F5CF2A /* BranchDetailsViewController.swift in Sources */,
 				B2C65B6B1DF5896800F5CF2A /* AppManager.swift in Sources */,
 				B2C65B701DF5962D00F5CF2A /* Branch.swift in Sources */,
