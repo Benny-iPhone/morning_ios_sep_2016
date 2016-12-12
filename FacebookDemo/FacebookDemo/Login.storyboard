@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GcF-yw-hQG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="L8r-RK-3td">
+            <objects>
+                <viewController id="GcF-yw-hQG" customClass="LoginViewController" customModule="FacebookDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DlN-61-PPH"/>
+                        <viewControllerLayoutGuide type="bottom" id="lwP-nJ-7gp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tSY-6Z-gfn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jj5-y6-5uc">
+                                <rect key="frame" x="67.5" y="313.5" width="240" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Q44-3j-3zm"/>
+                                    <constraint firstAttribute="height" constant="40" id="lCi-k0-jKR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jj5-y6-5uc" firstAttribute="centerX" secondItem="tSY-6Z-gfn" secondAttribute="centerX" id="Hur-P7-4Fs"/>
+                            <constraint firstItem="jj5-y6-5uc" firstAttribute="centerY" secondItem="tSY-6Z-gfn" secondAttribute="centerY" id="bpL-1i-FQO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButtonContainer" destination="jj5-y6-5uc" id="m6M-3U-JDc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQp-5V-0Ht" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="110"/>
+        </scene>
+    </scenes>
+</document>
