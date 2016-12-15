@@ -16,7 +16,9 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
+        let permission = ReadPermission.custom("read_custom_friendlists")
+        
+        let loginButton = LoginButton(readPermissions: [ .publicProfile , .userFriends, permission])
         
         loginButton.frame = loginButtonContainer.bounds
         loginButton.delegate = self

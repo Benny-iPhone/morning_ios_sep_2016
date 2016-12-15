@@ -15,6 +15,10 @@
 		B257629C1DFEA3B2007884C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B257629A1DFEA3B2007884C4 /* LaunchScreen.storyboard */; };
 		B25762A41DFEAA6D007884C4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25762A31DFEAA6D007884C4 /* Login.storyboard */; };
 		B25762A61DFEAAAA007884C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25762A51DFEAAAA007884C4 /* LoginViewController.swift */; };
+		B25762CF1E027960007884C4 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25762CE1E027960007884C4 /* AppManager.swift */; };
+		B2997F441E027F5C00577183 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2997F431E027F5C00577183 /* FriendsTableViewController.swift */; };
+		B2997F461E02804800577183 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2997F451E02804800577183 /* Friend.swift */; };
+		B2997F4B1E0283B600577183 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2997F4A1E0283B600577183 /* FriendCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		B25762A31DFEAA6D007884C4 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B25762A51DFEAAAA007884C4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B25762A71DFEC845007884C4 /* FacebookDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FacebookDemo.entitlements; sourceTree = "<group>"; };
+		B25762CE1E027960007884C4 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		B2997F431E027F5C00577183 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		B2997F451E02804800577183 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		B2997F4A1E0283B600577183 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		F624B19059222E296C3823FD /* Pods-FacebookDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FacebookDemo/Pods-FacebookDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FBADA77AB7031BBB40A2BE92 /* Pods_FacebookDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacebookDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,8 +93,9 @@
 			children = (
 				B25762A71DFEC845007884C4 /* FacebookDemo.entitlements */,
 				B25762911DFEA3B2007884C4 /* AppDelegate.swift */,
-				B25762931DFEA3B2007884C4 /* ViewController.swift */,
-				B25762A51DFEAAAA007884C4 /* LoginViewController.swift */,
+				B2997F491E0283A600577183 /* view */,
+				B2997F421E027F4100577183 /* controller */,
+				B25762CD1E027948007884C4 /* model */,
 				B25762A31DFEAA6D007884C4 /* Login.storyboard */,
 				B25762951DFEA3B2007884C4 /* Main.storyboard */,
 				B25762981DFEA3B2007884C4 /* Assets.xcassets */,
@@ -94,6 +103,33 @@
 				B257629D1DFEA3B2007884C4 /* Info.plist */,
 			);
 			path = FacebookDemo;
+			sourceTree = "<group>";
+		};
+		B25762CD1E027948007884C4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B25762CE1E027960007884C4 /* AppManager.swift */,
+				B2997F451E02804800577183 /* Friend.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		B2997F421E027F4100577183 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				B25762931DFEA3B2007884C4 /* ViewController.swift */,
+				B25762A51DFEAAAA007884C4 /* LoginViewController.swift */,
+				B2997F431E027F5C00577183 /* FriendsTableViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		B2997F491E0283A600577183 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B2997F4A1E0283B600577183 /* FriendCell.swift */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,9 +262,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2997F4B1E0283B600577183 /* FriendCell.swift in Sources */,
 				B25762A61DFEAAAA007884C4 /* LoginViewController.swift in Sources */,
 				B25762941DFEA3B2007884C4 /* ViewController.swift in Sources */,
 				B25762921DFEA3B2007884C4 /* AppDelegate.swift in Sources */,
+				B2997F461E02804800577183 /* Friend.swift in Sources */,
+				B25762CF1E027960007884C4 /* AppManager.swift in Sources */,
+				B2997F441E027F5C00577183 /* FriendsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
