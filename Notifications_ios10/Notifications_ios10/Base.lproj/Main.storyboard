@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="f7n-OK-SR2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="DkL-bF-37l">
+            <objects>
+                <viewController id="5DK-UZ-gYZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="43y-SY-dbe"/>
+                        <viewControllerLayoutGuide type="bottom" id="pDa-FB-M88"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vyB-G3-TWC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dib-Xu-zXQ">
+                        <barButtonItem key="rightBarButtonItem" title="add reminder" id="3Rd-aa-T9l">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="kbJ-W0-nTP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zE-zV-MBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="51"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Notifications_ios10" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tex-0h-vll">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="503825590.15635997">
+                                    <!--2016-12-19 07:33:10 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type push text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ncu-xO-B8u">
+                                <rect key="frame" x="20" y="84" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQb-bq-yvi">
+                                <rect key="frame" x="107.5" y="130" width="160" height="30"/>
+                                <state key="normal" title="create local notification"/>
+                                <connections>
+                                    <action selector="addLocalNotificationAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ExM-Ak-dBn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="qQb-bq-yvi" firstAttribute="top" secondItem="Ncu-xO-B8u" secondAttribute="bottom" constant="16" id="S1A-jO-cQK"/>
+                            <constraint firstItem="tex-0h-vll" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="S4g-88-bg7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tex-0h-vll" secondAttribute="bottom" id="c6R-73-qsP"/>
+                            <constraint firstAttribute="trailing" secondItem="tex-0h-vll" secondAttribute="trailing" id="db5-6l-gvS"/>
+                            <constraint firstItem="Ncu-xO-B8u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="iX2-xs-I1y"/>
+                            <constraint firstItem="qQb-bq-yvi" firstAttribute="centerX" secondItem="Ncu-xO-B8u" secondAttribute="centerX" id="pik-4N-yZ3"/>
+                            <constraint firstAttribute="trailing" secondItem="Ncu-xO-B8u" secondAttribute="trailing" constant="20" id="tOq-ar-eB8"/>
+                            <constraint firstItem="Ncu-xO-B8u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="uLE-aa-txg"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Lif-AW-U0c" appends="YES" id="uAF-Us-lHE"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="TEv-PS-usc"/>
+                    <connections>
+                        <outlet property="datePicker" destination="tex-0h-vll" id="utJ-Y5-JCG"/>
+                        <outlet property="textField" destination="Ncu-xO-B8u" id="iDe-CT-jga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Lif-AW-U0c">
+                    <connections>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="Gvi-tg-2L7"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1111" y="51"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hq1-vu-Lfj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f7n-OK-SR2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="39R-Vi-xax">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5DK-UZ-gYZ" kind="relationship" relationship="rootViewController" id="bfZ-fm-PQW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUP-HM-xWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-556" y="51"/>
+        </scene>
+    </scenes>
+</document>

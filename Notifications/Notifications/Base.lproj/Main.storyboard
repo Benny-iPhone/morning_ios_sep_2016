@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Notifications" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="alert title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ZQ-Oi-geQ">
+                                <rect key="frame" x="20" y="40" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="alert body" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RfH-fw-4NR">
+                                <rect key="frame" x="20" y="90" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IhH-Xx-FrE">
+                                <rect key="frame" x="20" y="140" width="335" height="29"/>
+                                <segments>
+                                    <segment title="sound 0"/>
+                                    <segment title="sound 1"/>
+                                    <segment title="sound 2"/>
+                                </segments>
+                            </segmentedControl>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="FIc-i6-oN4">
+                                <rect key="frame" x="20" y="205" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="eWN-jW-3ZY"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Av0-b0-9SD">
+                                <rect key="frame" x="122" y="209" width="8" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="badge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2Y-hU-IOQ">
+                                <rect key="frame" x="20" y="176" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUx-aa-ESQ">
+                                <rect key="frame" x="116" y="254" width="143" height="30"/>
+                                <state key="normal" title="schedule notification"/>
+                                <connections>
+                                    <action selector="scheduleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="buj-pg-t0O"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kcT-Ug-2du">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="503486810.40308702">
+                                    <!--2016-12-15 09:26:50 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="7ZQ-Oi-geQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="5Dq-w2-vOG"/>
+                            <constraint firstItem="7ZQ-Oi-geQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="8hw-Af-Yfx"/>
+                            <constraint firstItem="RUx-aa-ESQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AG9-R0-J4U"/>
+                            <constraint firstItem="RfH-fw-4NR" firstAttribute="top" secondItem="7ZQ-Oi-geQ" secondAttribute="bottom" constant="20" id="Chn-5y-kme"/>
+                            <constraint firstItem="RfH-fw-4NR" firstAttribute="leading" secondItem="7ZQ-Oi-geQ" secondAttribute="leading" id="FrE-yp-J8T"/>
+                            <constraint firstItem="FIc-i6-oN4" firstAttribute="top" secondItem="Q2Y-hU-IOQ" secondAttribute="bottom" constant="8" id="IPz-MU-bv9"/>
+                            <constraint firstItem="Av0-b0-9SD" firstAttribute="leading" secondItem="FIc-i6-oN4" secondAttribute="trailing" constant="8" id="M0g-8k-tFD"/>
+                            <constraint firstItem="Q2Y-hU-IOQ" firstAttribute="leading" secondItem="IhH-Xx-FrE" secondAttribute="leading" id="OeV-dI-NMf"/>
+                            <constraint firstItem="Av0-b0-9SD" firstAttribute="centerY" secondItem="FIc-i6-oN4" secondAttribute="centerY" id="T7y-cz-ApP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kcT-Ug-2du" secondAttribute="bottom" id="Tti-fP-Dpt"/>
+                            <constraint firstItem="kcT-Ug-2du" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WY1-nS-MDN"/>
+                            <constraint firstItem="IhH-Xx-FrE" firstAttribute="top" secondItem="RfH-fw-4NR" secondAttribute="bottom" constant="20" id="Xgn-1V-SLx"/>
+                            <constraint firstItem="RUx-aa-ESQ" firstAttribute="top" secondItem="FIc-i6-oN4" secondAttribute="bottom" constant="20" id="ZAI-kO-PhL"/>
+                            <constraint firstItem="RfH-fw-4NR" firstAttribute="trailing" secondItem="7ZQ-Oi-geQ" secondAttribute="trailing" id="cOA-r7-lSc"/>
+                            <constraint firstItem="IhH-Xx-FrE" firstAttribute="trailing" secondItem="RfH-fw-4NR" secondAttribute="trailing" id="iaj-oA-Ilb"/>
+                            <constraint firstItem="FIc-i6-oN4" firstAttribute="leading" secondItem="Q2Y-hU-IOQ" secondAttribute="leading" id="ihg-cL-PWJ"/>
+                            <constraint firstItem="IhH-Xx-FrE" firstAttribute="leading" secondItem="RfH-fw-4NR" secondAttribute="leading" id="j0W-U3-XqZ"/>
+                            <constraint firstItem="Q2Y-hU-IOQ" firstAttribute="top" secondItem="IhH-Xx-FrE" secondAttribute="bottom" constant="8" id="o4b-nR-YWN"/>
+                            <constraint firstAttribute="trailing" secondItem="7ZQ-Oi-geQ" secondAttribute="trailing" constant="20" id="oG6-rD-rj9"/>
+                            <constraint firstAttribute="trailing" secondItem="kcT-Ug-2du" secondAttribute="trailing" id="sux-FQ-8yN"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ZIG-yn-fbk" appends="YES" id="nOb-Su-TOg"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="badgeLabel" destination="Av0-b0-9SD" id="hYf-8e-YV6"/>
+                        <outlet property="badgeStepper" destination="FIc-i6-oN4" id="xkZ-hY-bGa"/>
+                        <outlet property="bodyTextField" destination="RfH-fw-4NR" id="Bt7-B8-JtF"/>
+                        <outlet property="datePicker" destination="kcT-Ug-2du" id="3LS-5x-OVE"/>
+                        <outlet property="soundSegmentedControl" destination="IhH-Xx-FrE" id="YJN-TO-OMU"/>
+                        <outlet property="titleTextField" destination="7ZQ-Oi-geQ" id="D3X-PW-zC0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ZIG-yn-fbk">
+                    <connections>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="Nle-ec-LmQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
