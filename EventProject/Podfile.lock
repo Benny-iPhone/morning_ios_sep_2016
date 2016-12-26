@@ -1,0 +1,15 @@
+PODS:
+  - FSCalendar (2.5.1)
+  - Toast (3.1.0)
+
+DEPENDENCIES:
+  - FSCalendar
+  - Toast (~> 3.1.0)
+
+SPEC CHECKSUMS:
+  FSCalendar: 8efeb4b92240937204165c7743f4375923112fb5
+  Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
+
+PODFILE CHECKSUM: 465daeadd128ad2757672cfbef5b0c886c157a68
+
+COCOAPODS: 1.1.1
